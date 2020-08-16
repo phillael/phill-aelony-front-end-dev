@@ -1,9 +1,11 @@
 ---
-title: "Gatsby is cool"
+title: "gatsby"
 date: "2020-08-13"
 ---
 
 I am learning Gatsby!
+
+![StoneCircles](./stoneCircles.jpg)
 
 ## Topics Covered
 
