@@ -1,0 +1,39 @@
+.navLink {
+  color: #193019;
+}
+
+.text,
+.link {
+  width: 40%;
+}
+.text {
+  opacity: 0;
+  font-size: 0.9rem;
+  padding: 5px 0 5px;
+  color: #d4ffd8;
+  line-height: 1.2;
+}
+
+.icon {
+  font-size: 2rem;
+  opacity: 1;
+  padding: 3px;
+}
+
+.navLink:hover {
+  .text {
+    opacity: 1;
+    transform: translate(5px, -30px) scale(1.2);
+    transition: ease-in-out 250ms;
+  }
+  .icon {
+    opacity: 0;
+
+    transition: ease-in-out 250ms;
+  }
+}
+
+.active-nav-item {
+  color: #033a2b;
+  border-bottom: 1px solid black;
+}

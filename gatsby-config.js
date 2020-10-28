@@ -8,6 +8,28 @@ module.exports = {
     author: "Phill Aelony",
   },
   plugins: [
+    `gatsby-plugin-smoothscroll`,
+    {
+      resolve: "gatsby-plugin-page-transitions",
+      options: {
+        transitionTime: 1000,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: "Abel",
+            variants: ["400"],
+          },
+          {
+            family: "Roboto",
+            variants: ["300", "500", "700"],
+          },
+        ],
+      },
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",

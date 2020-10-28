@@ -1,0 +1,75 @@
+.contactContainer {
+  margin: 100px auto;
+  width: 75vw;
+  max-width: 750px;
+  font-family: "Roboto", sans-serif;
+}
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin: 100px 0 0 0;
+}
+
+.message {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+.contactMethods {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 125px;
+}
+
+.email,
+.resume {
+  text-align: center;
+  transition: 250ms all;
+}
+
+a h2 {
+  margin-top: 10px;
+}
+.email:hover,
+.resume:hover {
+  filter: opacity(0.7);
+  transform: scale(1.1);
+  transition: 250ms all;
+}
+
+.llama {
+  position: absolute;
+  min-width: 700px;
+  bottom: 0;
+  right: -100px;
+  z-index: -10;
+  animation: llamaFloat 10s ease-in-out infinite, spaceLlama 5s;
+  transform: scale(0.8);
+}
+
+@keyframes spaceLlama {
+  0% {
+    transform: translate(500px, 200px) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(0.8);
+  }
+}
+
+@keyframes llamaFloat {
+  0% {
+    transform: translate(0, 0) scale(0.8) rotate(0deg);
+  }
+  25% {
+    transform: translate(3px, 3px) scale(0.9) rotate(3deg);
+  }
+  50% {
+    transform: translate(0, 0) scale(0.8) rotate(0);
+  }
+  75% {
+    transform: translate(-5px, -5px) scale(0.9) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(0.8) rotate(0);
+  }
+}

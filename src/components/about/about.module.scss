@@ -1,0 +1,159 @@
+.about {
+  box-sizing: border-box;
+  padding: 50px 0 50px;
+  color: white;
+  width: 100%;
+  background-image: radial-gradient(black, rgb(59, 59, 59));
+  background-color: black;
+}
+
+.aboutTitle {
+  margin-top: 2rem;
+  font-size: 2.7rem;
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 75vw;
+  max-width: 1000px;
+}
+
+figure {
+  margin: 20px;
+}
+figcaption p {
+  margin: 25px auto;
+  width: 60%;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.peppers {
+  width: 30vw;
+  max-width: 450px;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+.peppers:hover {
+  figcaption p {
+    font-size: 1rem;
+  }
+}
+
+.myName {
+  display: inline-block;
+  animation: nameAnimate 5s infinite;
+}
+
+//////////////////
+//    skills    //
+//////////////////
+
+.mySkills {
+}
+
+.skillsTitle {
+  font-size: 2rem;
+  margin-top: 40px;
+}
+
+.skillsList {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skillsList li {
+  margin: 0 40px 20px 0;
+  animation: shinySkills 7s infinite;
+}
+
+.skillsList li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.skillsList li:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.skillsList li:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.skillsList li:nth-child(4) {
+  animation-delay: 1.3s;
+}
+.skillsList li:nth-child(5) {
+  animation-delay: 1.7s;
+}
+.skillsList li:nth-child(6) {
+  animation-delay: 2.1s;
+}
+.skillsList li:nth-child(7) {
+  animation-delay: 2.5s;
+}
+.skillsList li:nth-child(8) {
+  animation-delay: 2.9s;
+}
+.skillsList li:nth-child(9) {
+  animation-delay: 3.3s;
+}
+/////////////////
+// animations  //
+/////////////////
+
+@keyframes nameAnimate {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  53% {
+    transform: translateY(0) rotate(0);
+  }
+  55% {
+    transform: translateY(10px) rotate(0);
+  }
+  60% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+  65% {
+    transform: translateY(-5px) rotate(-10deg);
+  }
+  70% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-10deg);
+  }
+  80% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+  85% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+  90% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes shinySkills {
+  0% {
+    color: white;
+  }
+  25% {
+    color: rgb(255, 251, 194);
+  }
+  50% {
+    color: rgb(255, 165, 48);
+  }
+  75% {
+    color: rgb(255, 88, 22);
+  }
+  100% {
+    color: white;
+  }
+}

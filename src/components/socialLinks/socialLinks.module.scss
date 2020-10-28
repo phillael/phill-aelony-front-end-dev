@@ -1,0 +1,38 @@
+.socialLinks {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.socialLink {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.socialIcon {
+  display: inline-block;
+  font-size: 2.5rem;
+  margin: 0.5rem 2rem;
+}
+
+.linkName {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  text-align: center;
+  line-height: 1;
+  opacity: 0;
+  transition: all 250ms;
+}
+
+.socialLink:hover {
+  .socialIcon {
+    opacity: 0;
+    transition: all 250ms;
+  }
+  .linkName {
+    opacity: 1;
+    transition: all 250ms;
+  }
+}

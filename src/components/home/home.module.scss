@@ -1,0 +1,203 @@
+////////////////////
+//    homepage    //
+////////////////////
+
+main {
+  box-sizing: border-box;
+  height: 100vh;
+  // background-color: #141414;
+}
+
+.homeContainer {
+  box-sizing: border-box;
+  padding: 20px 0 0 50px;
+  margin: 0 auto;
+  width: 75vw;
+  max-width: 1000px;
+}
+
+.socialLinks {
+  position: absolute;
+  right: 0;
+}
+////////////////////
+//   into text    //
+////////////////////
+
+.intro {
+  margin: 100px 50px;
+  font-size: 3rem;
+  width: 60%;
+}
+
+.hello {
+  font-size: 4rem;
+}
+
+.hiThere {
+  display: inline-block;
+  animation: slideInLeft 2s;
+}
+
+.myName {
+  display: inline-block;
+  animation: nameAnimate 5s infinite;
+}
+
+.phill {
+  display: inline-block;
+  animation: nameAnimate 5s infinite, slideInTop 2680ms;
+}
+
+.period {
+  display: inline-block;
+  animation: slideInTop 3.2s;
+}
+
+.front,
+.end,
+.developer {
+  font-size: 3.6rem;
+}
+.front {
+  animation: fadeIn 4s;
+}
+
+.end {
+  animation: fadeIn 4.5s;
+}
+
+.developer {
+  color: green;
+  animation: shimmer 3.8s infinite, fadeIn 5s;
+}
+
+.comma {
+  color: black;
+}
+
+.guitarist,
+.composer {
+  font-size: 2.5rem;
+}
+.guitarist {
+  animation: slideInLeft 6.5s;
+}
+
+.composer {
+  animation: slideInLeft 8s;
+}
+
+.myName:hover {
+  transform: rotate(1080deg);
+  transition: 500ms;
+}
+
+.llamas {
+  position: absolute;
+  z-index: -1;
+  width: 45vw;
+  min-width: 500px;
+  height: auto;
+  right: 0;
+  bottom: 0;
+  animation: llamasAnimate 2s;
+}
+
+////////////////////
+//  animations    //
+////////////////////
+
+@keyframes nameAnimate {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  53% {
+    transform: translateY(0) rotate(0);
+  }
+  55% {
+    transform: translateY(10px) rotate(0);
+  }
+  60% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+  65% {
+    transform: translateY(-5px) rotate(-10deg);
+  }
+  70% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-10deg);
+  }
+  80% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+  85% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+  90% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-500px);
+  }
+  80% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes llamasAnimate {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  70% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    color: rgb(0, 128, 117);
+  }
+  50% {
+    color: rgb(71, 180, 71);
+  }
+
+  100% {
+    color: green;
+  }
+}
