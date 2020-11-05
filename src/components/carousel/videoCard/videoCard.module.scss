@@ -1,0 +1,130 @@
+.card {
+  position: relative;
+  cursor: pointer;
+  width: 336px;
+  margin: 4px;
+  color: white;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.card:hover .time {
+  opacity: 0;
+  transition: 500ms;
+}
+
+.card:hover .icon,
+.card:hover .menu {
+  opacity: 1;
+  transition: 200ms ease;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 188px;
+  object-position: 20px 0 20px;
+  object-fit: cover;
+}
+
+.overlays {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 183px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  right: 0;
+}
+
+.iconWrapper {
+  position: relative;
+  width: 150px;
+  margin: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.icon {
+  font-size: 1.2rem;
+  background: var(--overlay-bg-color);
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+  opacity: 0;
+}
+
+.popOut {
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  width: 121px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border-radius: 3px 0 0 3px;
+  left: 100%;
+  opacity: 0;
+  background: var(--overlay-bg-color);
+}
+
+.iconWrapper:hover .icon {
+  border-radius: 0 3px 3px 0;
+}
+.iconWrapper:hover .popOut {
+  opacity: 1;
+  left: 0;
+  transition: 200ms all;
+}
+
+.time {
+  position: absolute;
+  background: var(--overlay-bg-color);
+  padding: 5px;
+  border-radius: 7%;
+  right: 0;
+  bottom: 0;
+  margin: 5px;
+  font-size: 0.8rem;
+  color: white;
+  opacity: 1;
+}
+
+///////////////////
+//     bottom   //
+//////////////////
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.stats {
+  color: var(--stats-color);
+  font-size: 1rem;
+}
+
+.bottom {
+  display: flex;
+}
+.info {
+  margin-top: 5px;
+  width: 300px;
+}
+
+.menu {
+  position: absolute;
+  right: -10px;
+  margin: 10px 20px 0 0;
+  color: var(--stats-color);
+  opacity: 0;
+  font-size: 1.2rem;
+}
+
+.menu:hover {
+  color: white;
+  opacity: 0.7;
+}

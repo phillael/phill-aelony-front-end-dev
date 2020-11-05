@@ -2,21 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  bottom: 0;
-  margin-top: 3rem;
   width: 100%;
+  margin-top: 4rem;
 }
 
 .waves {
   position: absolute;
   width: 100%;
-  z-index: -2;
   height: 150px;
   overflow: hidden;
 }
 
 .svg {
-  bottom: 0;
   height: 100%;
   width: 100%;
 }
@@ -31,4 +28,19 @@
   position: absolute;
   right: 3rem;
   font-size: 0.8rem;
+}
+
+@media (max-width: 750px) {
+  .footer {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .copyright {
+    position: relative;
+    padding-left: 100px;
+  }
+  .waves {
+    height: 175px;
+  }
 }

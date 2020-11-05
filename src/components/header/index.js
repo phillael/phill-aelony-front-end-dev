@@ -4,7 +4,7 @@ import "../../utils/fontawesome"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import ButtonLink from "../ButtonLink"
 
-const Header = () => {
+const Header = ({ hamburgerColor }) => {
   const [open, setOpen] = useState(true)
 
   return (
@@ -13,7 +13,7 @@ const Header = () => {
         className={headerStyles.openMenuButton}
         onClick={() => setOpen(prev => !prev)}
       >
-        <FontAwesomeIcon icon={"hamburger"} />
+        <FontAwesomeIcon icon={"hamburger"} style={{ color: hamburgerColor }} />
       </a>
 
       <header
@@ -37,40 +37,36 @@ const Header = () => {
 
         <nav>
           <ul className={headerStyles.navList}>
-            <li>
+            <li className={headerStyles.navItem}>
               <ButtonLink
                 activeClassName={headerStyles.activeNavItem}
-                className={headerStyles.navItem}
                 url={"../../#home"}
                 text={"Home"}
                 icon={"home"}
               />
             </li>
 
-            <li>
+            <li className={headerStyles.navItem}>
               <ButtonLink
                 activeClassName={headerStyles.activeNavItem}
-                className={headerStyles.navItem}
                 url={"../../#about"}
                 text={"About"}
                 icon={"user-astronaut"}
               />
             </li>
 
-            <li>
+            <li className={headerStyles.navItem}>
               <ButtonLink
                 activeClassName={headerStyles.activeNavItem}
-                className={headerStyles.navItem}
                 url={"../../#projects"}
                 text={"My Work"}
                 icon={"eye"}
               />
             </li>
 
-            <li>
+            <li className={headerStyles.navItem}>
               <ButtonLink
                 activeClassName={headerStyles.activeNavItem}
-                className={headerStyles.navItem}
                 url={"../../contact"}
                 text={"Contact Me!"}
                 icon={"envelope-open-text"}

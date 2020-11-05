@@ -4,7 +4,11 @@ import footerStyles from "./footer.module.scss"
 import "../../utils/fontawesome"
 import SocialLinks from "../socialLinks"
 
-const Footer = () => {
+const Footer = ({ footerBackground }) => {
+  const footerStyle = {
+    backgroundColor: footerBackground,
+  }
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -17,7 +21,7 @@ const Footer = () => {
 
   return (
     <footer className={footerStyles.footer}>
-      <div className={footerStyles.waves}>
+      <div className={footerStyles.waves} style={footerStyle}>
         <svg
           className={footerStyles.svg}
           viewBox="0 0 500 150"

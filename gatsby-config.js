@@ -8,7 +8,6 @@ module.exports = {
     author: "Phill Aelony",
   },
   plugins: [
-    `gatsby-plugin-smoothscroll`,
     {
       resolve: "gatsby-plugin-page-transitions",
       options: {
@@ -52,6 +51,7 @@ module.exports = {
       options: {
         plugins: [
           "gatsby-remark-relative-images",
+          `gatsby-remark-responsive-iframe`,
           {
             resolve: "gatsby-remark-images",
             options: {

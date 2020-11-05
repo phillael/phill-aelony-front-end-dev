@@ -1,30 +1,10 @@
 import React from "react"
 import projectsStyles from "./projects.module.scss"
-import { graphql, useStaticQuery } from "gatsby"
 import ProjectCard from "../projectCard"
+import data from "../../data/projects.json"
 
 const Projects = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
-        edges {
-          node {
-            picture {
-              file {
-                url
-              }
-            }
-            title
-            slug
-            publishedDate(formatString: "MMMM Do, YYYY")
-          }
-        }
-      }
-    }
-  `)
-  const posts = data.allContentfulBlogPost.edges
-
-  console.log(posts[0].node.picture.file.url)
+  const posts = data.projects
 
   return (
     <section id="projects" className={projectsStyles.projects}>
@@ -45,10 +25,11 @@ const Projects = () => {
           {posts.map(post => {
             return (
               <ProjectCard
-                title={post.node.title}
-                date={post.node.publishedDate}
-                thumbnail={post.node.picture.file.url}
-                link={`/blog/${post.node.slug}`}
+                title={post.title}
+                date={post.date}
+                thumbnail={post.thumbnail}
+                link={`/${post.url}`}
+                description={post.description}
               />
             )
           })}

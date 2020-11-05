@@ -2,16 +2,16 @@
 //    homepage    //
 ////////////////////
 
-main {
+.main {
+  position: relative;
   box-sizing: border-box;
   height: 100vh;
-  // background-color: #141414;
 }
 
 .homeContainer {
   box-sizing: border-box;
   padding: 20px 0 0 50px;
-  margin: 0 auto;
+  margin: 0 20%;
   width: 75vw;
   max-width: 1000px;
 }
@@ -25,9 +25,10 @@ main {
 ////////////////////
 
 .intro {
-  margin: 100px 50px;
-  font-size: 3rem;
+  margin: 150px 0;
+  font-size: 3.5rem;
   width: 60%;
+  min-width: 500px;
 }
 
 .hello {
@@ -57,7 +58,7 @@ main {
 .front,
 .end,
 .developer {
-  font-size: 3.6rem;
+  font-size: 4rem;
 }
 .front {
   animation: fadeIn 4s;
@@ -82,10 +83,12 @@ main {
 }
 .guitarist {
   animation: slideInLeft 6.5s;
+  line-height: 0.5;
 }
 
 .composer {
   animation: slideInLeft 8s;
+  line-height: 0.5;
 }
 
 .myName:hover {
@@ -102,6 +105,56 @@ main {
   right: 0;
   bottom: 0;
   animation: llamasAnimate 2s;
+}
+
+////////////////////
+//     footer     //
+////////////////////
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  z-index: -4;
+}
+
+.svg {
+  height: 100%;
+  width: 100%;
+}
+
+.path {
+  stroke: none;
+  fill: rgb(7, 36, 7);
+}
+
+////////////////////
+//  media queries //
+////////////////////
+
+@media (max-width: 800px) {
+  .homeContainer {
+    margin: 0 25%;
+  }
+
+  .front,
+  .end,
+  .developer,
+  .hello {
+    font-size: 3rem;
+  }
+  .intro {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .homeContainer {
+    margin: 0 auto;
+    padding-left: 0;
+  }
 }
 
 ////////////////////

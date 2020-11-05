@@ -1,8 +1,10 @@
 .contactContainer {
-  margin: 100px auto;
+  position: relative;
+  margin: 100px 25%;
   width: 75vw;
   max-width: 750px;
   font-family: "Roboto", sans-serif;
+  color: black;
 }
 .title {
   font-size: 3rem;
@@ -25,10 +27,12 @@
 .resume {
   text-align: center;
   transition: 250ms all;
+  color: rgb(0, 0, 0);
 }
 
-a h2 {
+.type {
   margin-top: 10px;
+  font-size: 2rem;
 }
 .email:hover,
 .resume:hover {
@@ -39,13 +43,37 @@ a h2 {
 
 .llama {
   position: absolute;
-  min-width: 700px;
+  min-width: 450px;
   bottom: 0;
   right: -100px;
-  z-index: -10;
+  z-index: -1;
   animation: llamaFloat 10s ease-in-out infinite, spaceLlama 5s;
   transform: scale(0.8);
 }
+
+///////////////////
+// media queries //
+//////////////////
+
+@media (max-width: 800px) {
+  .contactContainer {
+    margin: 0 auto;
+  }
+  .contactMethods {
+    flex-direction: column;
+  }
+  .resume {
+    margin-top: 6rem;
+  }
+
+  .llama {
+    display: none;
+  }
+}
+
+///////////////////
+//  animations  //
+//////////////////
 
 @keyframes spaceLlama {
   0% {

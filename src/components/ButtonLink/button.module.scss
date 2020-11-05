@@ -1,29 +1,29 @@
 .navLink {
   color: #193019;
+  text-align: center;
 }
 
-.text,
-.link {
-  width: 40%;
-}
 .text {
+  margin: 0;
+  text-align: center;
   opacity: 0;
-  font-size: 0.9rem;
+  font-size: 2.5rem;
   padding: 5px 0 5px;
   color: #d4ffd8;
   line-height: 1.2;
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 7rem;
   opacity: 1;
   padding: 3px;
+  animation: shinyButtons 5s infinite ease-in-out;
 }
 
 .navLink:hover {
   .text {
     opacity: 1;
-    transform: translate(5px, -30px) scale(1.2);
+    transform: scale(1.2) translateY(-65px);
     transition: ease-in-out 250ms;
   }
   .icon {
@@ -36,4 +36,49 @@
 .active-nav-item {
   color: #033a2b;
   border-bottom: 1px solid black;
+}
+
+@media (min-width: 800px) {
+  .icon {
+    font-size: 2rem;
+  }
+  .text,
+  .link {
+    width: 40%;
+  }
+  .text {
+    font-size: 1.2rem;
+  }
+  .navLink:hover {
+    .text {
+      transform: translate(75px, -30px);
+    }
+    .icon {
+      opacity: 0;
+
+      transition: ease-in-out 250ms;
+    }
+  }
+}
+
+//////////////////////////////
+//      animation           //
+//////////////////////////////
+
+@keyframes shinyButtons {
+  0% {
+    color: rgb(0, 0, 0);
+  }
+  25% {
+    color: rgb(0, 44, 17);
+  }
+  50% {
+    color: rgb(0, 128, 6);
+  }
+  75% {
+    color: rgb(8, 68, 0);
+  }
+  100% {
+    color: rgb(0, 0, 0);
+  }
 }

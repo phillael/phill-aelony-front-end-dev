@@ -1,40 +1,37 @@
 .header {
   position: fixed;
   box-sizing: border-box;
-  clip-path: polygon(0 0, 100% 0, 16% 100%, 0% 100%);
-  width: 225px;
   padding: 20px 20px;
-  left: -250px;
+  width: 100%;
+  left: -100%;
   top: 0;
   height: 100vh;
   background-image: linear-gradient(white, green, black);
   transition: left 500ms ease-in-out;
-  z-index: 2;
-}
-
-.openHeader {
-  left: -0px;
+  z-index: 3;
 }
 
 .openMenuButton,
 .closeMenuButton {
   cursor: pointer;
-  position: fixed;
-  z-index: 2;
-}
-
-.openMenuButton {
-  font-size: 3rem;
-  top: 20px;
-  left: 20px;
+  z-index: 3;
 }
 
 .closeMenuButton {
-  color: black;
+  position: absolute;
 
+  color: black;
   font-size: 1.8rem;
   top: 20px;
-  left: 150px;
+  right: 20px;
+}
+
+.openMenuButton {
+  position: fixed;
+
+  font-size: 3rem;
+  top: 20px;
+  left: 20px;
 }
 
 .closeMenuButton:hover,
@@ -42,6 +39,23 @@
   color: #008f0e;
   transform: scale(1.2) rotate(360deg);
   transition: 500ms;
+}
+
+@media (min-width: 800px) {
+  .header {
+    clip-path: polygon(0 0, 100% 0, 16% 100%, 0% 100%);
+    width: 225px;
+    left: -250px;
+  }
+  .closeMenuButton {
+    font-size: 1.8rem;
+    top: 20px;
+    left: 150px;
+  }
+}
+
+.openHeader {
+  left: -0px;
 }
 //////////////////////////
 //         title        //
@@ -51,7 +65,7 @@
   margin: 10px 10px 40px 0;
   color: black;
   line-height: 0.3;
-  font-size: 2.5rem;
+  font-size: 4rem;
   text-decoration: none;
 }
 
@@ -65,20 +79,21 @@
   cursor: default;
 }
 
+@media (min-width: 800px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
 //////////////////////////
 //         nav          //
 //////////////////////////
-
-.nav-item {
-  color: #ffffff;
-  font-size: 1rem;
-  // margin-right: 1.3rem;
-  text-decoration: none;
+.navItem {
+  text-align: center;
 }
-
 .nav-list {
   width: 100%;
-  height: 30vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -86,6 +101,14 @@
   margin: 0;
 
   padding: 0;
+}
+@media (min-width: 800px) {
+  .navItem {
+    transform: translateX(-75px);
+  }
+  .nav-list {
+    height: 30vh;
+  }
 }
 
 //////////////////////////

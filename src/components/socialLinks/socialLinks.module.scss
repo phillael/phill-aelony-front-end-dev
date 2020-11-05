@@ -36,3 +36,9 @@
     transition: all 250ms;
   }
 }
+
+@media (max-width: 750px) {
+  .socialLinks {
+    margin-bottom: 0;
+  }
+}
