@@ -3,7 +3,7 @@
     {
       "title": "React Carousel Component",
       "thumbnail": "../images/carousel.jpg",
-      "url": "../../carousel-component",
+      "url": "../../carousel",
       "description": "A custom carousel component modeled after YouTube. Built from scratch with React.",
       "date": "11/2/20"
     },

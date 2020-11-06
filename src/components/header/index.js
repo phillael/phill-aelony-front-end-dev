@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import ButtonLink from "../ButtonLink"
 
 const Header = ({ hamburgerColor }) => {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(window.innerWidth > 800)
 
   return (
     <div>
@@ -43,6 +43,7 @@ const Header = ({ hamburgerColor }) => {
                 url={"../../#home"}
                 text={"Home"}
                 icon={"home"}
+                setOpen={setOpen}
               />
             </li>
 
@@ -52,6 +53,7 @@ const Header = ({ hamburgerColor }) => {
                 url={"../../#about"}
                 text={"About"}
                 icon={"user-astronaut"}
+                setOpen={setOpen}
               />
             </li>
 
@@ -61,6 +63,7 @@ const Header = ({ hamburgerColor }) => {
                 url={"../../#projects"}
                 text={"My Work"}
                 icon={"eye"}
+                setOpen={setOpen}
               />
             </li>
 
@@ -70,6 +73,7 @@ const Header = ({ hamburgerColor }) => {
                 url={"../../contact"}
                 text={"Contact Me!"}
                 icon={"envelope-open-text"}
+                setOpen={setOpen}
               />
             </li>
           </ul>

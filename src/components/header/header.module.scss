@@ -7,7 +7,7 @@
   top: 0;
   height: 100vh;
   background-image: linear-gradient(white, green, black);
-  transition: left 500ms ease-in-out;
+
   z-index: 3;
 }
 
@@ -56,6 +56,7 @@
 
 .openHeader {
   left: -0px;
+  transition: left 500ms ease-in-out;
 }
 //////////////////////////
 //         title        //
