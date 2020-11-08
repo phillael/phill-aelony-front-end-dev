@@ -46,7 +46,7 @@ export default function Home() {
         </h1>
         <img
           className={homeStyles.llamas}
-          src="../../images/phill_llamas_transparent.png"
+          src="/images/phill_llamas_transparent.png"
           alt="phill with llamas in Ecuador"
         />
       </div>

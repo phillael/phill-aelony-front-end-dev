@@ -6,7 +6,7 @@ export default function Contact() {
     <div className={contactStyles.contactPage}>
       <img
         className={contactStyles.llama}
-        src="../../images/space_llama.png"
+        src="/images/space_llama.png"
         alt="Llama in space suit eating ice cream cone"
       />
       <div className={contactStyles.contactContainer}>
@@ -19,16 +19,18 @@ export default function Contact() {
           <a href="mailto:phillael@yahoo.com" className={contactStyles.email}>
             <img
               className={contactStyles.img}
-              src="../../images/email.png"
+              src="/images/email.png"
               alt="email icon"
             />
             <h2 className={contactStyles.type}>Email</h2>
           </a>
           <a
-            href="../../images/PhillAelonyResume.pdf"
+            href="/images/PhillAelonyResume.pdf"
             className={contactStyles.resume}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <img src="../../images/resume.png" alt="download resume icon" />
+            <img src="/images/resume.png" alt="download resume icon" />
             <h2>Download Resume</h2>
           </a>
         </div>

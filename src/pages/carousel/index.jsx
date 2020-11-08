@@ -6,6 +6,8 @@ import Head from "../../components/head"
 import data from "../../data/videos.json"
 import Prism from "prismjs"
 import ProjectNav from "../../components/projectNav"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 import { videoSnippet, carouselSnippet, cssSnippet } from "./snippets"
 
@@ -29,7 +31,22 @@ const CarouselPage = () => {
           React Carousel Component
         </h1>
 
-        <Carousel className={projectPageStyles.carousel} items={data.videos} />
+        <div className={projectPageStyles.iframeContainer}>
+          <Carousel
+            className={projectPageStyles.carousel}
+            items={data.videos}
+          />
+          <a
+            href="https://github.com/phillael/youtube-carousel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              className={`${projectPageStyles.carouselGithub} ${projectPageStyles.githubLink}`}
+              icon={faGithub}
+            />
+          </a>
+        </div>
 
         <article className={projectPageStyles.projectContent}>
           <section className={projectPageStyles.snippet}>

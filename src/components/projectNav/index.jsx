@@ -21,7 +21,7 @@ export default function ProjectNav() {
             <Link
               activeClassName={projectNavStyles.activeNavItem}
               className={projectNavStyles.navLink}
-              to="../../carousel-component"
+              to="../../carousel"
             >
               React Carousel Component
             </Link>

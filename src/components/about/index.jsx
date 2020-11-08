@@ -8,7 +8,7 @@ export default function About() {
         <figure>
           <img
             className={aboutStyles.peppers}
-            src="../../images/PhillMakingHotSauce.png"
+            src="/images/PhillMakingHotSauce.png"
             alt="Phill making hot sauce"
           />
           <figcaption>
@@ -27,7 +27,7 @@ export default function About() {
             Node.js, and CSS to name a few.
           </p>
           <p>
-            for the last 15 years I have been a guitarist, composer and band
+            For the last 15 years I have been a guitarist, composer, and band
             leader. I have put out many albums of my own original music,
             composed for an award winning video game, and played in some of the
             finest venues around the world. My dream is to make apps and

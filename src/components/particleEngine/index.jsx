@@ -4,15 +4,28 @@ import { useRef } from "react"
 import particleStyles from "./particleEngine.module.scss"
 
 const ParticleEngineComponent = () => {
-  let ref = useRef()
+  const ref = useRef(null)
 
   useEffect(() => {
-    let canvas = ref.current
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-    let pEngine = new ParticleEngine(canvas)
+    const canvas = ref.current
+    const pEngine = new ParticleEngine(canvas)
+
     console.log("created particle engine")
     canvas.addEventListener("mousedown", handleMousedown)
+    // window.addEventListener("scroll", resizeCanvas)
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+
+    function handleMousemove(e) {
+      let numberOfSparkles = 45
+      for (let i = 0; i < numberOfSparkles; i++) {
+        let sparkle = new Sparkle(e.clientX, e.clientY)
+        pEngine.addParticle(sparkle)
+      }
+
+      pEngine.startAnimation()
+      // console.log("started animation")
+    }
 
     function handleMousedown(e) {
       canvas.removeEventListener("mousedown", handleMousedown)
@@ -27,16 +40,12 @@ const ParticleEngineComponent = () => {
       canvas.addEventListener("mousedown", handleMousedown)
     }
 
-    function handleMousemove(e) {
-      let numberOfSparkles = 45
-      for (let i = 0; i < numberOfSparkles; i++) {
-        let sparkle = new Sparkle(e.clientX, e.clientY)
-        pEngine.addParticle(sparkle)
-      }
-      pEngine.startAnimation()
-      console.log("started animation")
+    return () => {
+      canvas.removeEventListener("mousedown", handleMousedown)
+      canvas.removeEventListener("mousemove", handleMousemove)
+      canvas.removeEventListener("mouseup", handleMouseup)
     }
-  })
+  }, [])
 
   return <canvas className={particleStyles.canvas} ref={ref} />
 }

@@ -25,10 +25,12 @@
 ////////////////////
 
 .intro {
+  z-index: -2;
   margin: 150px 0;
   font-size: 3.5rem;
   width: 60%;
   min-width: 500px;
+  cursor: default;
 }
 
 .hello {
@@ -38,11 +40,13 @@
 .hiThere {
   display: inline-block;
   animation: slideInLeft 2s;
+  z-index: -2;
 }
 
 .myName {
   display: inline-block;
   animation: nameAnimate 5s infinite;
+  z-index: -2;
 }
 
 .phill {

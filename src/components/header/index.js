@@ -78,6 +78,20 @@ const Header = ({ hamburgerColor }) => {
             </li>
           </ul>
         </nav>
+        <h3 className={headerStyles.fullName}>
+          <span>P</span>
+          <span>H</span>
+          <span>I</span>
+          <span>L</span>
+          <span>L</span>
+          <span>•</span>
+          <span>A</span>
+          <span>E</span>
+          <span>L</span>
+          <span>O</span>
+          <span>N</span>
+          <span>Y</span>
+        </h3>
       </header>
     </div>
   )
