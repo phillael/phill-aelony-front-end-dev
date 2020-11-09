@@ -1,11 +1,15 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import headerStyles from "./header.module.scss"
 import "../../utils/fontawesome"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import ButtonLink from "../ButtonLink"
 
 const Header = ({ hamburgerColor }) => {
-  const [open, setOpen] = useState(window.innerWidth > 800)
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    setOpen(window.innerWidth > 800)
+  }, [])
 
   return (
     <div>

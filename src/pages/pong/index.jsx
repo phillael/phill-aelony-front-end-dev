@@ -1,13 +1,17 @@
 import React, { useEffect } from "react"
 import Layout from "../../components/layout"
-import projectPageStyles from "../projectPage.module.scss"
+import projectPageStyles from "../../styles/projectPage.module.scss"
 import Head from "../../components/head"
 import Prism from "prismjs"
 import ProjectNav from "../../components/projectNav"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
-import { gameFlowSnippet, stateSnippet, collisionSnippet } from "./snippets"
+import {
+  gameFlowSnippet,
+  stateSnippet,
+  collisionSnippet,
+} from "../../utils/snippets/pong-snippets"
 
 const code = `{items.map(json => (
     <Video
@@ -57,6 +61,10 @@ const CarouselPage = () => {
               icon={faGithub}
             />
           </a>
+          <p className={projectPageStyles.disclaimer}>
+            This game isn't formatted for mobile yet! You can play with the
+            arrow keys, return key, and spacebar.
+          </p>
         </div>
         <article className={projectPageStyles.projectContent}>
           <section className={projectPageStyles.snippet}>
@@ -103,12 +111,12 @@ const CarouselPage = () => {
                 managing state.
               </p>
               <p>
-                The alpaca animations are made by using a "sprite sheet". It is
-                just one image that contains all the different animations frames
-                of the sprite. Different states such as left, right, attack, and
-                idle are at different positions on the sheet. So when left=true
-                the drawAlpaca() function will jump to the appropriate spot on
-                the sprite sheet.
+                The alpaca animations are made by using a "sprite sheet". The
+                sheet is one image that contains all the different animations
+                frames of the sprite. Different states such as left, right,
+                attack, and idle are at different positions on the sheet. So
+                when left=true the drawAlpaca() function will jump to the
+                appropriate spot on the sprite sheet.
               </p>
 
               <p>
@@ -140,15 +148,15 @@ const CarouselPage = () => {
               <p>
                 Once the dimensions are defined, all thats needed is to return a
                 boolean depending on if the ball dimensions cross with the
-                player dimensions. So if collision returns true we can call some
-                other functions to make the ball behave appropriately.
+                player dimensions. So if collision(b, p) returns true we can
+                call some other functions to make the ball behave appropriately.
               </p>
 
               <p>
-                When the ball hits the ceiling or floor we simply inverse the y
-                velocity - ball.velocityY = -ball.velocityY. I went to the extra
-                trouble of changing the angle of the ball depending on which
-                part of the paddle it hits. This is done by defining the
+                When the ball hits the ceiling or floor we simply invert the Y
+                velocity by setting ball.velocityY = -ball.velocityY. I went to
+                the extra trouble of changing the angle of the ball depending on
+                which part of the paddle it hits. This is done by defining the
                 collidePoint and using some basic trigonometry.
               </p>
             </div>

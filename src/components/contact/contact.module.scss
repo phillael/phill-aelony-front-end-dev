@@ -9,7 +9,7 @@
 .title {
   font-size: 3rem;
   text-align: center;
-  margin: 100px 0 0 0;
+  margin: 100px 0 20px 0;
 }
 
 .message {
@@ -55,10 +55,24 @@
 // media queries //
 //////////////////
 
+@media (max-width: 500px) {
+  .contactContainer {
+    width: 80%;
+  }
+  .title,
+  .message {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
 @media (max-width: 800px) {
   .contactContainer {
     margin: 0 auto;
   }
+
   .contactMethods {
     flex-direction: column;
   }

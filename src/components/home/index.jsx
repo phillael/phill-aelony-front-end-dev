@@ -4,10 +4,6 @@ import SocialLinks from "../socialLinks"
 import ParticleEngineComponent from "../particleEngine"
 
 export default function Home() {
-  // const footerStyle = {
-  //   backgroundColor: footerBackground,
-  // }
-
   return (
     <main className={homeStyles.main} id="home">
       <ParticleEngineComponent />

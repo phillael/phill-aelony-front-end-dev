@@ -20,36 +20,79 @@ export default function About() {
         </figure>
 
         <div className={aboutStyles.aboutContent}>
-          <h2 className={aboutStyles.aboutTitle}>The Legend of Phill</h2>
+          <h2 className={aboutStyles.aboutTitle}>The Legend of Phill Aelony</h2>
           <p>
-            Heya! <span className={aboutStyles.myName}>I'm Phill!</span> I'm a
-            developer living in Dallas, TX. My strengths are JavaScript, React,
-            Node.js, and CSS to name a few.
+            <strong>
+              {" "}
+              Heya! <span className={aboutStyles.myName}>I'm Phill!</span> I'm a
+              developer from Dallas, TX.{" "}
+            </strong>{" "}
+            I love to build things with JavaScript, React, and CSS to name a
+            few. I'm currently available for freelance or long term work.
           </p>
           <p>
-            For the last 15 years I have been a guitarist, composer, and band
-            leader. I have put out many albums of my own original music,
-            composed for an award winning video game, and played in some of the
-            finest venues around the world. My dream is to make apps and
-            software that can help musicians and artist work together and make a
-            better living.
+            For the last 15 years I have been a guitarist, composer and band
+            leader. I have produced several albums of my own original music,
+            composed a score for{" "}
+            <a
+              className={aboutStyles.aboutLink}
+              href="https://play.eco/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              the award winning video game ECO
+            </a>
+            , and performed in some of the finest venues around the world. As a
+            musician I developed many skills that make me an excellent
+            programmer - creativity, focus, the ability to improvise and learn
+            quickly, entrepreneurship, leadership, marketing, planning,
+            logistics, graphic design, performing under pressure, meeting
+            deadlines, and most importantly teamwork.
           </p>
 
           <p>
-            I began learning progamming in 2018 as I was doing some composing
-            and sound design for video games. I became fascinated with the power
-            of programming and realized that I wanted to learn more. In 2019 I
-            enrolled in a Python course, and it absolutely blew my mind. Once I
-            finished that course I became addicted to solving coding
-            challenges/puzzles on codewars.com and other similar sites. After a
-            couple other fullstack web development bootcamps and over a year of
-            studying with some great mentors, I am excited to start working and
-            learning more.
+            I began learning Python in 2018 while studying interactive
+            music/sound design at{" "}
+            <a
+              className={aboutStyles.aboutLink}
+              href="https://school.videogameaudio.com/apply/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              The School of Video Game Audio
+            </a>
+            . I became fascinated with the power of programming and was
+            instantly hooked. After completing several bootcamps for JavaScript,
+            React, and responsive web design I began to build things on my own
+            and seek help from more experienced developers. With the guidance of
+            my mentors{" "}
+            <a
+              className={aboutStyles.aboutLink}
+              href="https://devmentor.live/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Mark at devmentorlive
+            </a>
+            , and the great{" "}
+            <a
+              className={aboutStyles.aboutLink}
+              href="https://ianmarshall.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ian Marshall
+            </a>{" "}
+            I have been able to make leaps and bounds in my understanding of web
+            development and computer science. Along the way I have built a
+            network of experienced programmers/friends that I continue to learn
+            from.
           </p>
 
           <p>
             When I'm not programming I love to study flamenco guitar, travel,
-            cook, and go on adventures with my dog!
+            cook, and go on adventures with my dog.
           </p>
 
           <section className={aboutStyles.mySkills}>
@@ -64,6 +107,9 @@ export default function About() {
               <li>Gatsby.js</li>
               <li>Python</li>
               <li>AWS Cloud Practitioner</li>
+              <li>Adobe Photoshop</li>
+              <li>Premiere</li>
+              <li>Illustrator</li>
             </ul>
           </section>
         </div>

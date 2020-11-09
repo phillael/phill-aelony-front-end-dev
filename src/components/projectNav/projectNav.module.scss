@@ -50,6 +50,11 @@
   border-bottom: 1px solid greenyellow;
 }
 
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.2rem;
+  }
+}
 ///////////////////
 //   animations  //
 ///////////////////

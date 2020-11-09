@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import Layout from "../../components/layout"
 import Carousel from "../../components/carousel"
-import projectPageStyles from "../projectPage.module.scss"
+import projectPageStyles from "../../styles/projectPage.module.scss"
 import Head from "../../components/head"
 import data from "../../data/videos.json"
 import Prism from "prismjs"
@@ -9,7 +9,11 @@ import ProjectNav from "../../components/projectNav"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
-import { videoSnippet, carouselSnippet, cssSnippet } from "./snippets"
+import {
+  videoSnippet,
+  carouselSnippet,
+  cssSnippet,
+} from "../../utils/snippets/carousel-snippets"
 
 const CarouselPage = () => {
   useEffect(() => {

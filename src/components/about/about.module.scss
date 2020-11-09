@@ -1,7 +1,7 @@
 .aboutContainer {
   display: flex;
   flex-direction: column;
-  width: 75vw;
+  width: 85vw;
   margin: 0 auto;
 }
 
@@ -19,6 +19,10 @@
   background-color: black;
 }
 
+.aboutLink {
+  color: white;
+  text-decoration: underline;
+}
 figure {
   margin: 0 auto;
   order: 2;

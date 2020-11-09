@@ -1,13 +1,17 @@
 import React, { useEffect } from "react"
 import Layout from "../../components/layout"
-import projectPageStyles from "../projectPage.module.scss"
+import projectPageStyles from "../../styles/projectPage.module.scss"
 import Head from "../../components/head"
 import Prism from "prismjs"
 import ProjectNav from "../../components/projectNav"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
-import { mapSnippet, locationSnippet, fetchSnippet } from "./snippets"
+import {
+  mapSnippet,
+  locationSnippet,
+  fetchSnippet,
+} from "../../utils/snippets/tracker-snippets"
 
 const IpAddressTracker = () => {
   useEffect(() => {
@@ -100,7 +104,7 @@ const IpAddressTracker = () => {
                 content is loaded.
               </p>
               <p>
-                There is an event listener on the on the button so that triggers
+                There is an event listener on the on the button that triggers
                 the search function, sending the user input to the Geolocation
                 API.
               </p>

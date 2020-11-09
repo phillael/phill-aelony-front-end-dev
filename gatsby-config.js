@@ -9,12 +9,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-page-transitions",
-      options: {
-        transitionTime: 1000,
-      },
-    },
-    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
@@ -30,13 +24,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
-    {
-      resolve: "gatsby-source-contentful",
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
+
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",

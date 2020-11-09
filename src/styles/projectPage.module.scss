@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
-  width: 80vw;
+  width: 85vw;
   max-width: 1200px;
   color: white;
   font-family: Roboto, Arial, sans-serif;
@@ -28,6 +28,10 @@ iframe {
   overflow-y: hidden;
 }
 
+.disclaimer {
+  width: 80%;
+  font-size: 0.8rem;
+}
 .projectContent {
   margin: 2rem 0;
   width: 100%;

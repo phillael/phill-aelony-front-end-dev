@@ -10,6 +10,8 @@ export default function SocialLinks({ color }) {
   return (
     <div className={socialStyles.socialLinks}>
       <a
+        target="_blank"
+        rel="noopener noreferrer"
         className={socialStyles.socialLink}
         href="https://github.com/phillael"
         style={myStyle}
@@ -18,14 +20,18 @@ export default function SocialLinks({ color }) {
         <p className={socialStyles.linkName}>Github</p>
       </a>
       <a
+        target="_blank"
+        rel="noopener noreferrer"
         className={socialStyles.socialLink}
-        href="https://www.phillaelony.com"
+        href="https://www.phillaelonymusic.com"
         style={myStyle}
       >
         <FontAwesomeIcon className={socialStyles.socialIcon} icon={"guitar"} />
         <p className={socialStyles.linkName}>My Music Page</p>
       </a>
       <a
+        target="_blank"
+        rel="noopener noreferrer"
         className={socialStyles.socialLink}
         href="https://twitter.com/PhillAelony"
         style={myStyle}

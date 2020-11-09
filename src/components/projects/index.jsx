@@ -15,9 +15,8 @@ const Projects = () => {
             What I've been working on
           </h2>
           <p>
-            I've found that building things is the best way to learn. So here
-            are a few projects that I've made to develop my skills in different
-            areas{" "}
+            Here you can check out some things I've built and take a look at the
+            code. Give me a shout if you have any questions or suggestions!
           </p>
         </div>
 
@@ -28,7 +27,7 @@ const Projects = () => {
                 title={post.title}
                 date={post.date}
                 thumbnail={post.thumbnail}
-                link={`/${post.url}`}
+                link={post.url}
                 description={post.description}
               />
             )
