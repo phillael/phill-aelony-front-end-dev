@@ -13,12 +13,12 @@ const Header = ({ hamburgerColor }) => {
 
   return (
     <div>
-      <a
+      <div
         className={headerStyles.openMenuButton}
         onClick={() => setOpen(prev => !prev)}
       >
         <FontAwesomeIcon icon={"hamburger"} style={{ color: hamburgerColor }} />
-      </a>
+      </div>
 
       <header
         className={`${headerStyles.header} ${open && headerStyles.openHeader}`}

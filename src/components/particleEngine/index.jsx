@@ -100,7 +100,7 @@ class ParticleEngine {
 
 class Sparkle {
   constructor(x, y) {
-    this.radius = 1
+    this.radius = 5
     this.x = x
     this.y = y
     this.a = 1
