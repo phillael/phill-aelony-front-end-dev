@@ -3,20 +3,23 @@ import projectsStyles from "./projects.module.scss"
 import ProjectCard from "../projectCard"
 import data from "../../data/projects.json"
 
-const Projects = () => {
+const Projects = ({ standAlone = false }) => {
   const posts = data.projects
+  const title = "Check out my work"
 
   return (
     <section id="projects" className={projectsStyles.projects}>
       <div className={projectsStyles.projectsContainer}>
         <div className={projectsStyles.aboutProjects}>
           {" "}
-          <h2 className={projectsStyles.projectsTitle}>
-            What I've been working on
-          </h2>
+          {standAlone ? (
+            <h1 className={projectsStyles.projectsTitle}>{title}</h1>
+          ) : (
+            <h2 className={projectsStyles.projectsTitle}>{title}</h2>
+          )}
           <p>
-            Here you can check out some things I've built and take a look at the
-            code. Give me a shout if you have any questions or suggestions!
+            Here you can see some things I've built and take a look at the code.
+            Give me a shout if you have any questions or suggestions!
           </p>
         </div>
 

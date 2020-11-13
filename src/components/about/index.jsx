@@ -1,12 +1,13 @@
 import React from "react"
 import aboutStyles from "./about.module.scss"
+import Image from "../img"
 
 export default function About() {
   return (
     <section id="about" className={aboutStyles.about}>
       <div className={aboutStyles.aboutContainer}>
         <figure>
-          <img
+          <Image
             className={aboutStyles.peppers}
             src="/images/PhillMakingHotSauce.png"
             alt="Phill making hot sauce"

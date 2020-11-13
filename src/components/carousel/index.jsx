@@ -39,16 +39,9 @@ export default function Carousel({ items }) {
               left: cardSize * -currIndex,
             }}
           >
+            {/* destructure? */}
             {items.map(json => (
-              <Video
-                key={json.url}
-                title={json.title}
-                thumbnail={json.thumb}
-                url={json.url}
-                views={json.views}
-                length={json.length}
-                date={json.uploadDate}
-              />
+              <Video key={json.url} {...json} />
             ))}
           </div>
         </div>

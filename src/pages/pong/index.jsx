@@ -37,7 +37,10 @@ const CarouselPage = () => {
       footerBackground="#181818"
       hamburgerColor="white"
     >
-      <Head title="Alpaca Pong" />
+      <Head
+        title="Phill Aelony Projects | Alpaca Pong"
+        description="This is my version of Pong built with vanilla JavaScript. Music and sound design by Phill Aelony"
+      />
       <ProjectNav />
 
       <main className={projectPageStyles.carouselPageContainer}>

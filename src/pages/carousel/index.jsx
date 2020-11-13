@@ -27,7 +27,10 @@ const CarouselPage = () => {
       footerBackground="#181818"
       hamburgerColor="white"
     >
-      <Head title="React Carousel Component" />
+      <Head
+        title="Phill Aelony Projects | React Carousel Component"
+        description="This is a youTube style carousel I built with React and CSS"
+      />
       <ProjectNav />
 
       <main className={projectPageStyles.carouselPageContainer}>

@@ -1,10 +1,11 @@
 import React from "react"
 import contactStyles from "./contact.module.scss"
+import Image from "../img"
 
 export default function Contact() {
   return (
     <div className={contactStyles.contactPage}>
-      <img
+      <Image
         className={contactStyles.llama}
         src="/images/space_llama.png"
         alt="Llama in space suit eating ice cream cone"

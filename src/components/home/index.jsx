@@ -2,6 +2,7 @@ import React from "react"
 import homeStyles from "./home.module.scss"
 import SocialLinks from "../socialLinks"
 import ParticleEngineComponent from "../particleEngine"
+import Image from "../img"
 
 export default function Home() {
   return (
@@ -40,7 +41,7 @@ export default function Home() {
           <span className={homeStyles.guitarist}>Guitarist,</span>{" "}
           <span className={homeStyles.composer}>and Composer.</span>
         </h1>
-        <img
+        <Image
           className={homeStyles.llamas}
           src="/images/phill_llamas_transparent.png"
           alt="phill with llamas in Ecuador"

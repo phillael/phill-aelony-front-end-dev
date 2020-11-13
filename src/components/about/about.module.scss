@@ -20,6 +20,8 @@
 }
 
 .aboutLink {
+  position: relative;
+  z-index: 2;
   color: white;
   text-decoration: underline;
 }
@@ -181,17 +183,20 @@ figcaption p {
 @keyframes shinySkills {
   0% {
     color: white;
+    transform: scale(1);
   }
   25% {
     color: rgb(255, 251, 194);
   }
   50% {
     color: rgb(255, 165, 48);
+    transform: scale(1.1);
   }
   75% {
     color: rgb(255, 88, 22);
   }
   100% {
     color: white;
+    transform: scale(1);
   }
 }

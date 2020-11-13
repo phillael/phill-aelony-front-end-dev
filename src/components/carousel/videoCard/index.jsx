@@ -3,15 +3,15 @@ import Top from "./top"
 import Bottom from "./bottom"
 import videoStyles from "./videoCard.module.scss"
 
-export default function Video(props) {
+export default function Video({ thumbnail, length, title, views, uploadDate }) {
   return (
     <div className={videoStyles.card}>
-      <Top thumbnail={props.thumbnail} length={props.length} />
+      <Top thumbnail={thumbnail} length={length} />
       <Bottom
-        title={props.title}
-        views={props.views}
-        length={props.length}
-        date={props.date}
+        title={title}
+        views={views}
+        length={length}
+        uploadDate={uploadDate}
       />
     </div>
   )

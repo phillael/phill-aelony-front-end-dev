@@ -6,7 +6,10 @@ import Contact from "../components/contact"
 const ContactPage = () => {
   return (
     <Layout>
-      <Head title="Contact" />
+      <Head
+        title="Contact Me | Phill Aelony Resume"
+        description="Here you can email Phill Aelony or download his resume!"
+      />
       <Contact />
     </Layout>
   )

@@ -25,7 +25,7 @@ const IpAddressTracker = () => {
       footerBackground="#181818"
       hamburgerColor="white"
     >
-      <Head title="IP address Tracker" />
+      <Head title="Phill Aelony Projects | IP address Tracker" />
       <ProjectNav />
 
       <main className={projectPageStyles.carouselPageContainer}>

@@ -8,7 +8,7 @@ import Projects from "../components/projects"
 const IndexPage = () => {
   return (
     <Layout>
-      <Head title="Home" />
+      <Head description="I build crazy apps with with React, JavaScript, and CSS" />
 
       <Home />
       <About />

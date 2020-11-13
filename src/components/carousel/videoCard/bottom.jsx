@@ -1,20 +1,20 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons"
-import videoStyles from "./videoCard.module.scss"
+import { bottom, info, stats, menu } from "./videoCard.module.scss"
 
-export default function Bottom(props) {
+export default function Bottom({ title, date, views }) {
   return (
-    <div className={videoStyles.bottom}>
-      <div className={videoStyles.info}>
-        <div className={videoStyles.title}>{props.title}</div>
-        <div className={videoStyles.stats}>
+    <div className={bottom}>
+      <div className={info}>
+        <div className={title}>{title}</div>
+        <div className={stats}>
           <p>
-            {props.views} · {props.date}
+            {views} · {date}
           </p>
         </div>
       </div>
-      <div className={videoStyles.menu}>
+      <div className={menu}>
         <FontAwesomeIcon icon={faEllipsisV} />
       </div>
     </div>
