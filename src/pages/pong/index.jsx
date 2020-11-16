@@ -66,7 +66,16 @@ const CarouselPage = () => {
           </a>
           <p className={projectPageStyles.disclaimer}>
             This game isn't formatted for mobile yet! You can play with the
-            arrow keys, return key, and spacebar.
+            arrow keys, return key, and spacebar. To view this in a seperate
+            window{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://phillael.github.io/Pong-Multiverse-Alpaca-Squadron/"
+            >
+              <strong>click here</strong>
+            </a>
+            .
           </p>
         </div>
         <article className={projectPageStyles.projectContent}>

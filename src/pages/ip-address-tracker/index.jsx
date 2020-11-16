@@ -46,6 +46,17 @@ const IpAddressTracker = () => {
               icon={faGithub}
             />
           </a>
+          <p className={projectPageStyles.disclaimer}>
+            To view this in a seperate window{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://phillael.github.io/IP-address-tracker/"
+            >
+              <strong>click here</strong>
+            </a>
+            .
+          </p>
         </div>
 
         <article className={projectPageStyles.projectContent}>
