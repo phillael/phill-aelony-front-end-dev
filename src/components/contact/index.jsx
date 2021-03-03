@@ -7,8 +7,8 @@ export default function Contact() {
     <div className={contactStyles.contactPage}>
       <Image
         className={contactStyles.llama}
-        src="/images/space_llama.png"
-        alt="Llama in space suit eating ice cream cone"
+        src="https://phillip-aelony.imgix.net/images/space_llama.png"
+        alt="Phill Aelony Photoshop art - Llama in space suit eating ice cream cone."
       />
       <div className={contactStyles.contactContainer}>
         <h1 className={contactStyles.title}>Lets build something together</h1>
@@ -21,7 +21,7 @@ export default function Contact() {
             <img
               className={contactStyles.img}
               src="/images/email.png"
-              alt="email icon"
+              alt="Contact Phill Aelony via email"
             />
             <h2 className={contactStyles.type}>Email</h2>
           </a>
@@ -31,7 +31,10 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/resume.png" alt="download resume icon" />
+            <img
+              src="/images/resume.png?auto=format"
+              alt="Download Phill Aelony's resume."
+            />
             <h2>Download Resume</h2>
           </a>
         </div>

@@ -1,30 +1,89 @@
 import React from "react"
-import { useEffect } from "react"
-import { useRef } from "react"
+import { useState, useEffect, useRef } from "react"
+import useWindowSize from "../../hooks/useWindowSize"
 import particleStyles from "./particleEngine.module.scss"
+import ParticleEngine from "./particleEngine"
+import Interface from "./interface/index"
+import Sprinkle from "./particles/sprinkle"
+import Triangle from "./particles/triangle"
+import Laser from "./particles/laser"
+import Molecule from "./particles/molecule"
+import Wormhole from "./particles/wormhole"
+import Llama from "./particles/llama"
+import Clown from "./particles/clown"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faChevronRight,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons"
+
+let particles = {
+    Sprinkles(x, y) {
+      return new Sprinkle(x, y)
+    },
+    Triangles(x, y) {
+      return new Triangle(x, y)
+    },
+    Lasers(x, y) {
+      return new Laser(x, y)
+    },
+    Molecules(x, y) {
+      return new Molecule(x, y)
+    },
+    Wormholes(x, y) {
+      return new Wormhole(x, y)
+    },
+    Llamas(x, y) {
+      return new Llama(x, y)
+    },
+    Clowns(x, y) {
+      return new Clown(x, y)
+    },
+  },
+  quantities = {
+    Sprinkles: 25,
+    Triangles: 5,
+    Lasers: 50,
+    Molecules: 10,
+    Wormholes: 10,
+    Llamas: 1,
+    Clowns: 1,
+  }
 
 const ParticleEngineComponent = () => {
+  const [currentParticle, setCurrentParticle] = useState("Triangles")
+  const [currIndex, setCurrIndex] = useState(2)
+  const iconSize = 70
+  const particleArray = [
+    "Sprinkles",
+    "Wormholes",
+    "Molecules",
+    "Triangles",
+    "Llamas",
+    "Lasers",
+    "Clowns",
+  ]
+  const [open, setOpen] = useState(false)
   const ref = useRef(null)
+  const size = useWindowSize()
 
   useEffect(() => {
     const canvas = ref.current
+    canvas.width = size.width
+    canvas.height = size.height
+
     const pEngine = new ParticleEngine(canvas)
 
-    console.log("created particle engine")
     canvas.addEventListener("mousedown", handleMousedown)
-    // window.addEventListener("scroll", resizeCanvas)
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
 
     function handleMousemove(e) {
-      let numberOfSparkles = 45
-      for (let i = 0; i < numberOfSparkles; i++) {
-        let sparkle = new Sparkle(e.clientX, e.clientY)
-        pEngine.addParticle(sparkle)
+      let numberOfParticles = quantities[currentParticle]
+      for (let i = 0; i < numberOfParticles; i++) {
+        let p = particles[currentParticle](e.clientX, e.clientY)
+        pEngine.addParticle(p)
       }
 
       pEngine.startAnimation()
-      // console.log("started animation")
     }
 
     function handleMousedown(e) {
@@ -45,92 +104,76 @@ const ParticleEngineComponent = () => {
       canvas.removeEventListener("mousemove", handleMousemove)
       canvas.removeEventListener("mouseup", handleMouseup)
     }
-  }, [])
+  }, [currentParticle, size])
 
-  return <canvas className={particleStyles.canvas} ref={ref} />
+  return (
+    <div className={particleStyles.particleEngine}>
+      <canvas className={particleStyles.canvas} ref={ref} />
+
+      <div
+        className={particleStyles.launcher}
+        onClick={() => setOpen(!open)}
+      ></div>
+      <div
+        className={`${particleStyles.interfaceWrapper} ${
+          open && particleStyles.open
+        }`}
+      >
+        <button
+          onClick={() => setOpen(!open)}
+          className={particleStyles.closeButton}
+        >
+          &#10005;
+        </button>
+        <div
+          className={`${particleStyles.interface} ${
+            open && particleStyles.open
+          }`}
+        >
+          {currIndex > 0 ? (
+            <div className={`${particleStyles.arrow} ${particleStyles.left}`}>
+              <FontAwesomeIcon
+                icon={faChevronLeft}
+                onClick={() => setCurrIndex(curr => curr - 1)}
+              />
+            </div>
+          ) : null}
+
+          {currIndex < 4 ? (
+            <div className={`${particleStyles.arrow} ${particleStyles.right}`}>
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                onClick={() => setCurrIndex(curr => curr + 1)}
+              />
+            </div>
+          ) : null}
+          <Interface open={open} />
+          <div className={particleStyles.carousel}>
+            <div
+              style={{ left: iconSize * -currIndex }}
+              className={particleStyles.slider}
+            >
+              {particleArray.map(particle => {
+                return (
+                  <img
+                    key={particle}
+                    src={`/images/${particle}.png?auto=format`}
+                    alt={particle}
+                    className={`${open && particleStyles.open} ${
+                      currentParticle === particle
+                        ? particleStyles.active
+                        : null
+                    }`}
+                    onClick={() => setCurrentParticle(particle)}
+                  />
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default ParticleEngineComponent
-
-class ParticleEngine {
-  constructor(canvas) {
-    this.canvas = canvas
-    this.ctx = canvas.getContext("2d")
-    this.particles = []
-    this.isAnimating = false
-  }
-  addParticle(p) {
-    this.particles.push(p)
-  }
-
-  startAnimation() {
-    if (this.isAnimating) return
-    this.isAnimating = true
-    requestAnimationFrame(() => this.animate())
-  }
-  stopAnimation() {
-    this.isAnimating = false
-  }
-  animate(t) {
-    /*TODO: framerate */
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-    //draw & update each particle from oldest to newest
-    for (let p of this.particles) {
-      p.render(this.ctx)
-      p.update()
-    }
-    //filter out dead particles from newest to oldest
-    for (let i = this.particles.length - 1; i >= 0; i--) {
-      let p = this.particles[i]
-      if (!p.isAlive(this.canvas)) {
-        this.particles.splice(i, 1) //remove 1 particle at index i
-      }
-    }
-    //are there any more particles?
-    if (!this.particles.length) {
-      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-      this.isAnimating = false
-    }
-    //repeat animation loop
-    if (this.isAnimating) {
-      requestAnimationFrame(() => this.animate())
-    }
-  }
-}
-
-class Sparkle {
-  constructor(x, y) {
-    this.radius = 5
-    this.x = x
-    this.y = y
-    this.a = 1
-    this.r = Math.floor(Math.random() * 256)
-    this.g = Math.floor(Math.random() * 256)
-    this.b = Math.floor(Math.random() * 256)
-    let angle = Math.random() * Math.PI * 2
-    let minSpeed = 4
-    let maxSpeed = 10
-    let velocity = Math.random() * (maxSpeed - minSpeed) + minSpeed
-    //once you have angle and velocity, you can find deltaX and deltaY
-    this.deltaX = velocity * Math.cos(angle)
-    this.deltaY = velocity * Math.sin(angle)
-  }
-
-  update() {
-    this.a -= 0.02
-    this.x += this.deltaX
-    this.y += this.deltaY
-    this.deltaY += 0.5
-  }
-  render(ctx) {
-    ctx.fillStyle = `rgba(${this.r}, ${this.g}, ${this.b}, ${this.a})`
-    ctx.beginPath()
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
-    ctx.fill()
-  }
-  isAlive(canvas) {
-    //kill sparkle if it moves off canvas to the right
-    //return this.x + this.defaults.radius < canvas.width;
-    return this.a > 0
-  }
-}

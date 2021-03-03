@@ -18,7 +18,7 @@
 
 .socialLinks {
   position: absolute;
-  right: 0;
+  right: 30px;
 }
 ////////////////////
 //   into text    //
@@ -26,13 +26,22 @@
 
 .intro {
   box-sizing: border-box;
+  font-family: "Abel";
 
   z-index: -2;
   margin: 150px 0;
   font-size: 3.5rem;
   width: 60%;
   min-width: 500px;
+  user-select: none;
   cursor: default;
+}
+
+.hello,
+.hiThere,
+.myName,
+.phill {
+  user-select: none;
 }
 
 .hello {
@@ -54,6 +63,7 @@
 .phill {
   display: inline-block;
   animation: nameAnimate 5s infinite, slideInTop 2680ms;
+  z-index: -2;
 }
 
 .period {
@@ -166,6 +176,9 @@
     min-width: 350px;
   }
 
+  .socialLinks {
+    right: 0px;
+  }
   .intro {
     min-width: 300px;
     margin: 125px auto 0;

@@ -8,7 +8,7 @@ import Projects from "../components/projects"
 const IndexPage = () => {
   return (
     <Layout>
-      <Head description="I build crazy apps with with React, JavaScript, and CSS" />
+      <Head description="Phill Aelony Web Developer Portfolio. Phill Aelony is a web developer living in Dallas, Texas. He is highly skilled in Javascript, React, HTML, and CSS. Here you can contact or hire Phill Aelony to build websites and apps. This page contains react components built from scratch by Phill Aelony." />
 
       <Home />
       <About />

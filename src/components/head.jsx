@@ -20,7 +20,7 @@ const Head = ({ title, description }) => {
       title={title || defaultTitle}
       meta={[
         {
-          property: "description",
+          name: "description",
           content: description || defaultDescription,
         },
       ]}

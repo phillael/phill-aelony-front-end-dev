@@ -1,6 +1,0 @@
-function smoothScrollTo(id) {
-  var el = document.getElementById(id)
-  var top = el.offsetTop;
-  var left = 0;
-  window.scrollTo({top: top, left: left, behavior: "smooth"})
-}

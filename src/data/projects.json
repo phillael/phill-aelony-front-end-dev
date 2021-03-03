@@ -2,24 +2,27 @@
   "projects": [
     {
       "title": "React Carousel Component",
-      "thumbnail": "../images/carousel.jpg",
+      "thumbnail": "https://phillip-aelony.imgix.net/images/carousel.jpg?auto=format",
       "url": "../../carousel",
       "description": "A custom carousel component modeled after YouTube. Built from scratch with React.",
-      "date": "11/2/20"
+      "date": "11/2/20",
+      "alt": "Phill Aelony React Components - React component modeled after YouTube carousel."
     },
     {
       "title": "IP Address Tracker",
-      "thumbnail": "../images/ip_address_tracker.jpg",
+      "thumbnail": "https://phillip-aelony.imgix.net/images/ip_address_tracker.jpg?auto=format",
       "url": "../../ip-address-tracker",
       "description": "Type in an IP address or domain name to view it's location on the map.",
-      "date": "10/7/20"
+      "date": "10/7/20",
+      "alt": "Phill Aelony Javascript app - an IP address tracker that uses 2 APIs to show location of IP address on map."
     },
     {
       "title": "Alpaca Pong",
-      "thumbnail": "../images/pong.jpg",
+      "thumbnail": "https://phillip-aelony.imgix.net/images/pong.jpg?auto=format",
       "url": "../../pong",
       "description": "Pong re-imagined with alpacas and an original soundtrack. Made with pure JavaScript.",
-      "date": "10/15/20"
+      "date": "10/15/20",
+      "alt": "Phill Aelony Javascript game - This game was made with pure Javascript on an HTML canvas. Original music and sound design by Phill Aelony."
     }
   ]
 }

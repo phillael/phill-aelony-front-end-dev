@@ -8,7 +8,7 @@ const ContactPage = () => {
     <Layout>
       <Head
         title="Contact Me | Phill Aelony Resume"
-        description="Here you can email Phill Aelony or download his resume!"
+        description="Phill Aelony Portfolio | Here you can download my resume or send me an email. "
       />
       <Contact />
     </Layout>

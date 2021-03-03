@@ -3,6 +3,7 @@ import homeStyles from "./home.module.scss"
 import SocialLinks from "../socialLinks"
 import ParticleEngineComponent from "../particleEngine"
 import Image from "../img"
+// import observer from "../../utils/useIntersect"
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
 
       <div className={homeStyles.homeContainer}>
         <h1 className={homeStyles.intro}>
-          <span className={homeStyles.hiThere}>Hi there,</span>{" "}
+          <span className={homeStyles.hiThere}>Hi there, </span>
           <span className={homeStyles.phill}>I'm Phill</span>
           <span className={homeStyles.period}>.</span> <br />
           <span className={homeStyles.front}>Front</span>{" "}
@@ -43,8 +44,8 @@ export default function Home() {
         </h1>
         <Image
           className={homeStyles.llamas}
-          src="/images/phill_llamas_transparent.png"
-          alt="phill with llamas in Ecuador"
+          src="https://phillip-aelony.imgix.net/images/phill_llamas_transparent.png?auto=format"
+          alt="Phill Aelony with his llama friends on the top of Mt. Teleferico outside of Quito, Ecuador. This photo is from January 2020."
         />
       </div>
     </main>

@@ -92,6 +92,11 @@ figcaption p {
 //    skills    //
 //////////////////
 
+.mySkills,
+.skillsTitle {
+  user-select: none;
+}
+
 .mySkills {
   order: 3;
 }
@@ -114,6 +119,7 @@ figcaption p {
 .skillsList li {
   margin: 0 40px 20px 0;
   animation: shinySkills 7s infinite;
+  user-select: none;
 }
 
 .skillsList li:nth-child(1) {

@@ -29,7 +29,7 @@ const CarouselPage = () => {
     >
       <Head
         title="Phill Aelony Projects | React Carousel Component"
-        description="This is a youTube style carousel I built with React and CSS"
+        description="Phill Aelony Portfolio | This is a YouTube style carousel component I built with react. This demonstrates my ability to build useful, resusable components with React, Javascript, and CSS."
       />
       <ProjectNav />
 

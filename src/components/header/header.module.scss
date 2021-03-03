@@ -8,7 +8,7 @@
   height: 100vh;
   background-image: linear-gradient(white, green, black);
   transition: left 250ms ease-in-out;
-  z-index: 3;
+  z-index: 1005;
 }
 
 .openMenuButton,
@@ -23,14 +23,14 @@
   color: black;
   font-size: 1.8rem;
   top: 20px;
-  right: 20px;
+  left: 100px;
 }
 
 .openMenuButton {
   position: fixed;
 
   font-size: 1.8rem;
-  top: 20px;
+  top: 12px;
   left: 20px;
 }
 

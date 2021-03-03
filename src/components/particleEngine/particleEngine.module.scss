@@ -1,7 +1,173 @@
 .canvas {
   position: fixed;
-  width: 100%;
-  height: 100vh;
   z-index: 0;
   overflow-y: hidden;
+}
+
+.interfaceWrapper {
+  position: fixed;
+  height: 0;
+  width: 0;
+  right: -260px;
+  top: 100px;
+  transition: 250ms all;
+  z-index: 3;
+}
+.interfaceWrapper.open {
+  height: 255px;
+  width: 255px;
+  right: 65px;
+  transition: 250ms all;
+}
+
+.closeButton {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  right: 0px;
+  top: -10px;
+  font-size: 2rem;
+  user-select: none;
+  cursor: pointer;
+  color: green;
+}
+.closeButton:hover {
+  opacity: 0.7;
+}
+
+.interface {
+  transform: rotate(-360deg);
+  transition: 500ms all;
+}
+.interface.open {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 255px;
+  height: 255px;
+  top: 200px;
+  right: 20px;
+  background-image: radial-gradient(black, rgb(95, 1, 167));
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  // border: 1px solid rgb(0, 0, 0);
+  transform: rotate(0);
+  transition: 500ms all;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  font-size: 1.8rem;
+  z-index: 1;
+  color: rgb(207, 207, 207);
+  filter: drop-shadow(1px 2px 3px rgb(56, 54, 54));
+  cursor: pointer;
+}
+
+.arrow:hover {
+  color: white;
+}
+
+.left {
+  left: 10px;
+}
+.right {
+  right: 10px;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 210px;
+  z-index: 10;
+}
+
+.slider {
+  position: absolute;
+  display: flex;
+  transition: all 250ms;
+}
+.slider img {
+  height: 0;
+  width: 0;
+  margin: 5px;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.slider img.open {
+  filter: invert(100%);
+  height: 60px;
+  width: 60px;
+
+  transition: 250ms all;
+  opacity: 0.75;
+}
+
+.slider img:hover {
+  cursor: pointer;
+}
+
+.slider img.active {
+  transform: scale(1.6);
+  opacity: 1;
+  border-bottom: 1px solid;
+  transition: 250ms all;
+}
+
+.launcher {
+  background-image: url("https://media.giphy.com/media/jtd6dzbJuEGYnP9QWv/giphy.gif");
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 10px;
+  color: white;
+  z-index: 10;
+  padding: 15px;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  border-bottom: 2px solid black;
+  border-right: 1px solid black;
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+  box-shadow: 10px 10px 40px rgb(0, 0, 0);
+  transform: scale(1);
+  opacity: 1;
+  transition: 250ms all;
+}
+
+.launcher:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  opacity: 0.8;
+  transition: 250ms all;
+}
+
+@media (max-width: 600px) {
+  .launcher {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    height: 25px;
+    width: 25px;
+    font-size: 1.3rem;
+  }
+  .launcher:hover {
+    font-size: 1.4rem;
+  }
+
+  .interfaceWrapper.open {
+    top: 30%;
+    right: 50%;
+
+    margin-right: -107px;
+  }
 }

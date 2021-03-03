@@ -9,8 +9,8 @@ export default function About() {
         <figure>
           <Image
             className={aboutStyles.peppers}
-            src="/images/PhillMakingHotSauce.png"
-            alt="Phill making hot sauce"
+            src="https://phillip-aelony.imgix.net/images/PhillMakingHotSauce.png?auto=format"
+            alt="Phill Aelony Making a Thai hot sauce from scratch."
           />
           <figcaption>
             <p>
@@ -106,7 +106,7 @@ export default function About() {
               <li>Node.js</li>
               <li>Git</li>
               <li>Gatsby.js</li>
-              <li>Python</li>
+              <li>TypeScript</li>
               <li>AWS Cloud Practitioner</li>
               <li>Adobe Photoshop</li>
               <li>Premiere</li>

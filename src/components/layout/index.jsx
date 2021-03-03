@@ -3,6 +3,7 @@ import Header from "../header"
 import Footer from "../footer"
 import "../../styles/index.scss"
 import layoutStyles from "./layout.module.scss"
+import Chatbot from "../chatbot"
 
 export default function Layout(props) {
   const layoutStyle = {
@@ -15,7 +16,7 @@ export default function Layout(props) {
         <Header hamburgerColor={props.hamburgerColor} />
         {props.children}
       </div>
-
+      <Chatbot />
       <Footer footerBackground={props.footerBackground} />
     </div>
   )

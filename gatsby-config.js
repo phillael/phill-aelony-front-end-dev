@@ -4,6 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
+    siteUrl: "https://www.phillcodes.com",
     title:
       "Phill Aelony | React Developer, JavaScript Wizard, Front End Developer",
     author: "Phill Aelony",
@@ -12,23 +13,17 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-web-font-loader`,
       options: {
-        fonts: [
-          {
-            family: "Abel",
-            variants: ["400"],
-          },
-          {
-            family: "Roboto",
-            variants: ["300", "500", "700"],
-          },
-        ],
+        google: {
+          families: ["Abel", "Roboto:300,500,700"],
+        },
       },
     },
     "gatsby-plugin-react-helmet",
 
     "gatsby-plugin-sass",
+    "gatsby-plugin-robots-txt",
     {
       resolve: "gatsby-source-filesystem",
       options: {

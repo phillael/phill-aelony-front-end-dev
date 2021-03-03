@@ -39,7 +39,7 @@ const CarouselPage = () => {
     >
       <Head
         title="Phill Aelony Projects | Alpaca Pong"
-        description="This is my version of Pong built with vanilla JavaScript. Music and sound design by Phill Aelony"
+        description="Phill Aelony Portfolio | This is a recreation of Pong built by Phill Aelony using Javascript on an HTML5 canvas. This demonstrates my ability to program game physics and animations. Music and sound design by Phill Aelony."
       />
       <ProjectNav />
 

@@ -27,6 +27,7 @@ const Projects = ({ standAlone = false }) => {
           {posts.map(post => {
             return (
               <ProjectCard
+                alt={post.alt}
                 title={post.title}
                 date={post.date}
                 thumbnail={post.thumbnail}

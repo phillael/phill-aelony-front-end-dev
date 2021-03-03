@@ -1,0 +1,147 @@
+.launcher {
+  position: fixed;
+  bottom: 120px;
+  right: 25px;
+  font-size: 2rem;
+  z-index: 1001;
+  padding: 15px;
+  height: 38px;
+  width: 38px;
+  background-image: linear-gradient(rgb(0, 24, 7), rgb(40, 77, 45));
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  box-shadow: 10px 10px 40px rgb(0, 0, 0);
+  transform: scale(1);
+  transition: 250ms all;
+}
+
+.launcher:hover {
+  cursor: pointer;
+  background-image: linear-gradient(rgba(0, 24, 7, 0.9), rgba(40, 77, 45, 0.9));
+  transition: 250ms all;
+
+  transform: scale(1.2);
+}
+
+.chatWindow {
+  font-family: "Roboto", sans-serif;
+
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 1000;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  bottom: 120px;
+  right: 50px;
+  box-shadow: 5px 5px 30px rgb(82, 82, 82);
+  transition: 250ms all;
+}
+.chatWindow.open {
+  display: inline-block;
+  width: 350px;
+  height: 550px;
+  transition: 250ms all;
+  bottom: 175px;
+  right: 75px;
+}
+
+@media (max-width: 600px) {
+  .chatWindow.open {
+    display: inline-block;
+    width: 100%;
+    height: 80vh;
+    transition: 250ms all;
+    top: 0px;
+    left: 0;
+    border-radius: 0;
+  }
+  .launcher {
+    bottom: 75px;
+    right: 10px;
+    padding: 10px;
+    height: 25px;
+    width: 25px;
+    font-size: 1.3rem;
+  }
+  .launcher:hover {
+    font-size: 1.4rem;
+  }
+}
+
+.head {
+  text-align: center;
+  background-image: linear-gradient(to left, rgb(14, 107, 14), black);
+  padding: 5px;
+  color: white;
+}
+
+.head h3 {
+  font-size: 1.5rem;
+  margin: 10px 0 10px 0;
+}
+.head h4 {
+  margin-bottom: 15px;
+}
+.messageBubble {
+  background-color: rgb(228, 238, 230);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  display: inline-block;
+  max-width: 225px;
+}
+
+.dialogue {
+  font-weight: lighter;
+
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.botMessage {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin: 0 0 0 10px;
+  justify-self: flex-end;
+}
+.inputBox {
+  position: absolute;
+
+  width: 100%;
+  bottom: 0;
+}
+
+.input {
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: rgb(214, 214, 214);
+  border: none;
+  outline: none;
+}
+
+.sendIcon {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 20px;
+  bottom: 12px;
+  color: white;
+}
+.sendIcon:hover {
+  cursor: pointer;
+  color: green;
+  transform: scale(1.2);
+  transition: 250ms all;
+}

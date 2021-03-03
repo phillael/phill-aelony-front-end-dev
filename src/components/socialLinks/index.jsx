@@ -1,7 +1,7 @@
 import React from "react"
 import socialStyles from "./socialLinks.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 export default function SocialLinks({ color }) {
   const myStyle = {
@@ -33,11 +33,14 @@ export default function SocialLinks({ color }) {
         target="_blank"
         rel="noopener noreferrer"
         className={socialStyles.socialLink}
-        href="https://twitter.com/PhillAelony"
+        href="https://www.linkedin.com/in/phillip-aelony-82a28616a/"
         style={myStyle}
       >
-        <FontAwesomeIcon className={socialStyles.socialIcon} icon={faTwitter} />
-        <p className={socialStyles.linkName}>Twitter</p>
+        <FontAwesomeIcon
+          className={socialStyles.socialIcon}
+          icon={faLinkedin}
+        />
+        <p className={socialStyles.linkName}>LinkedIn</p>
       </a>
     </div>
   )

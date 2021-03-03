@@ -25,7 +25,11 @@ const IpAddressTracker = () => {
       footerBackground="#181818"
       hamburgerColor="white"
     >
-      <Head title="Phill Aelony Projects | IP address Tracker" />
+      <Head
+        title="Phill Aelony Projects | IP address Tracker"
+        description="Phill Aelony Portfolio | This is an IP address tracker I built as a challenge from frontendmentor.io. This demonstrates my ability to use multiple APIs together to create a useful real world app. This was built by Phill Aelony with pure javascript, HTML, and CSS. It uses the geolocation API, as well as leaflet.js."
+      />
+
       <ProjectNav />
 
       <main className={projectPageStyles.carouselPageContainer}>
