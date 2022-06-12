@@ -1,18 +1,19 @@
-import React, { useEffect, useState, useRef } from "react"
-import chatStyles from "./chatbot.module.scss"
-import "../../utils/fontawesome"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import useWindowSize from "../../hooks/useWindowSize"
-import axios from "axios"
+import React, { useEffect, useState, useRef } from "react";
+import chatStyles from "./chatbot.module.scss";
+import "../../utils/fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// Custom hook to provide size for chat window
+import useWindowSize from "../../hooks/useWindowSize";
+import axios from "axios";
 
-const id = Math.random()
+const id = Math.random();
 function botSay(text) {
   return {
     sender: "Phill",
     recipient: "user",
     text,
     timestamp: Date.now(),
-  }
+  };
 }
 
 function userSay(text) {
@@ -21,50 +22,56 @@ function userSay(text) {
     recipient: "chatbot",
     text,
     timestamp: Date.now(),
-  }
+  };
 }
 
 export default function Chatbot() {
-  const ref = useRef(undefined)
-  const [open, setOpen] = useState(false)
-  const [botMessages, setBotMessages] = useState([])
-  const [userMessages, setUserMessages] = useState([])
-  const [message, setMessage] = useState("")
-  const size = useWindowSize()
-
-  const motd =
-    "My name is Phill Aelony. Have a look around. Just don't break anything! Let me know if you get lost or confused."
-
+  const ref = useRef(undefined);
+  const [open, setOpen] = useState(false);
+  const [botMessages, setBotMessages] = useState([]);
+  const [userMessages, setUserMessages] = useState([]);
+  const [message, setMessage] = useState("");
+  const size = useWindowSize();
   const userStyles = {
     backgroundColor: "lightblue",
-  }
-  useEffect(() => {
-    setBotMessages(prev => [botSay(motd), ...prev])
-  }, [])
+  };
+  const motd =
+    "My name is Phill Aelony. Have a look around. Just don't break anything! Let me know if you get lost or confused.";
 
   useEffect(() => {
-    ref.current.scrollIntoView()
-  }, [userMessages, botMessages])
+    setBotMessages((prev) => [botSay(motd), ...prev]);
+  }, []);
+
+  useEffect(() => {
+    // scroll newest message into view
+    ref.current.scrollIntoView();
+  }, [userMessages, botMessages]);
 
   function handleNewUserMessage() {
-    setUserMessages(prev => [...prev, userSay(message)])
+    // set user messages to all previous messages plus the new one
+    setUserMessages((prev) => [...prev, userSay(message)]);
+    // post the new message and id
     axios
       .post("https://chatbot-2427.twil.io/chat", {
         message,
         id,
       })
-      .then(response => {
-        setBotMessages(prev => [
+      // get the response and set the state of botMessages
+      .then((response) => {
+        setBotMessages((prev) => [
           ...prev,
-          ...response.data.response.says.reverse().map(say => botSay(say.text)),
-        ])
-
-        setMessage("")
-      })
+          ...response.data.response.says
+            // will need to reverse to display correctly
+            .reverse()
+            .map((say) => botSay(say.text)),
+        ]);
+        // clear the input
+        setMessage("");
+      });
   }
 
   function zip(a, b) {
-    return a.flatMap((k, i) => [k, b[i]])
+    return a.flatMap((k, i) => [k, b[i]]);
   }
 
   return (
@@ -86,7 +93,9 @@ export default function Chatbot() {
           <h4>Let me know if you have any questions!</h4>
         </div>
         <div id="dialogue" className={chatStyles.dialogue}>
-          {zip(botMessages, userMessages).map(message => {
+          {/* the zip function will return a new array with the bot messages
+          and user messages in order of the conversation */}
+          {zip(botMessages, userMessages).map((message) => {
             return message ? (
               message.sender === "user" ? (
                 <div className={chatStyles.messageBubble} style={userStyles}>
@@ -104,15 +113,16 @@ export default function Chatbot() {
               )
             ) : (
               ""
-            )
+            );
           })}
+          {/* chat window ref to manage scroll into view */}
           <div ref={ref} />
         </div>
         <div className={chatStyles.inputBox}>
           <form
-            onSubmit={e => {
-              e.preventDefault()
-              handleNewUserMessage()
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleNewUserMessage();
             }}
           >
             <input
@@ -120,7 +130,7 @@ export default function Chatbot() {
               type="text"
               style={{ width: "100%", boxSizing: "border-box" }}
               value={message}
-              onChange={e => setMessage(e.target.value)}
+              onChange={(e) => setMessage(e.target.value)}
             />
 
             <FontAwesomeIcon
@@ -132,5 +142,5 @@ export default function Chatbot() {
         </div>
       </div>
     </div>
-  )
+  );
 }

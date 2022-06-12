@@ -1,6 +1,6 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -9,7 +9,7 @@ module.exports = {
       "Phill Aelony | React Developer, JavaScript Wizard, Front End Developer",
     author: "Phill Aelony",
     description:
-      "Portfolio site (React, Gatsby) from Programmer, guitarist, composer, llama enthusiast, Phill Aelony",
+      "Phill Aelony - Front end dev at Microsoft Azure - JavaScript, React, HTML, CSS, C#, .NET",
   },
   plugins: [
     {
@@ -21,7 +21,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
-
     "gatsby-plugin-sass",
     "gatsby-plugin-robots-txt",
     {
@@ -31,22 +30,5 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    "gatsby-plugin-sharp",
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          "gatsby-remark-relative-images",
-          `gatsby-remark-responsive-iframe`,
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 750,
-              linkImagesToOriginal: false,
-            },
-          },
-        ],
-      },
-    },
   ],
-}
+};

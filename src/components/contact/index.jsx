@@ -1,6 +1,6 @@
-import React from "react"
-import contactStyles from "./contact.module.scss"
-import Image from "../img"
+import React from "react";
+import contactStyles from "./contact.module.scss";
+import Image from "../img";
 
 export default function Contact() {
   return (
@@ -11,7 +11,7 @@ export default function Contact() {
         alt="Phill Aelony Photoshop art - Llama in space suit eating ice cream cone."
       />
       <div className={contactStyles.contactContainer}>
-        <h1 className={contactStyles.title}>Lets build something together</h1>
+        <h1 className={contactStyles.title}>Let's build stuff! 🍕🦙🍕</h1>
         <h4 className={contactStyles.message}>
           Feel free to reach out if you're looking for a developer, have a
           question, or just want to connect.
@@ -26,7 +26,7 @@ export default function Contact() {
             <h2 className={contactStyles.type}>Email</h2>
           </a>
           <a
-            href="/images/PhillAelonyResume.pdf"
+            href="/images/phill-aelony-resume.pdf"
             className={contactStyles.resume}
             target="_blank"
             rel="noopener noreferrer"
@@ -41,5 +41,5 @@ export default function Contact() {
         <div className={contactStyles.socialLinks}></div>
       </div>
     </div>
-  )
+  );
 }

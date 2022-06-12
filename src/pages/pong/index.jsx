@@ -1,35 +1,23 @@
-import React, { useEffect } from "react"
-import Layout from "../../components/layout"
-import projectPageStyles from "../../styles/projectPage.module.scss"
-import Head from "../../components/head"
-import Prism from "prismjs"
-import ProjectNav from "../../components/projectNav"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import React, { useEffect } from "react";
+import Layout from "../../components/layout";
+import projectPageStyles from "../../styles/projectPage.module.scss";
+import Head from "../../components/head";
+import Prism from "prismjs";
+import ProjectNav from "../../components/projectNav";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import {
   gameFlowSnippet,
   stateSnippet,
   collisionSnippet,
-} from "../../utils/snippets/pong-snippets"
-
-const code = `{items.map(json => (
-    <Video
-      key={json.url}
-      title={json.title}
-      thumbnail={json.thumb}
-      url={json.url}
-      views={json.views}
-      length={json.length}
-      date={json.uploadDate}
-    />
-  ))}`
+} from "../../utils/snippets/pong-snippets";
 
 const CarouselPage = () => {
   useEffect(() => {
     // call the highlightAll() function to style our code blocks
-    Prism.highlightAll()
-  })
+    Prism.highlightAll();
+  });
 
   return (
     <Layout
@@ -179,7 +167,7 @@ const CarouselPage = () => {
         </article>
       </main>
     </Layout>
-  )
-}
+  );
+};
 
-export default CarouselPage
+export default CarouselPage;

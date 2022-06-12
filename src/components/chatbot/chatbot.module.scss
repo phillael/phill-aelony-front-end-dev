@@ -40,6 +40,7 @@
   box-shadow: 5px 5px 30px rgb(82, 82, 82);
   transition: 250ms all;
 }
+
 .chatWindow.open {
   display: inline-block;
   width: 350px;
@@ -59,6 +60,7 @@
     left: 0;
     border-radius: 0;
   }
+
   .launcher {
     bottom: 75px;
     right: 10px;
@@ -67,6 +69,7 @@
     width: 25px;
     font-size: 1.3rem;
   }
+
   .launcher:hover {
     font-size: 1.4rem;
   }
@@ -83,9 +86,11 @@
   font-size: 1.5rem;
   margin: 10px 0 10px 0;
 }
+
 .head h4 {
   margin-bottom: 15px;
 }
+
 .messageBubble {
   background-color: rgb(228, 238, 230);
   margin: 10px;
@@ -139,6 +144,7 @@
   bottom: 12px;
   color: white;
 }
+
 .sendIcon:hover {
   cursor: pointer;
   color: green;

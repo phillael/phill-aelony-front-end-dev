@@ -1,12 +1,13 @@
-import React from "react"
-import socialStyles from "./socialLinks.module.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
+import React from "react";
+import socialStyles from "./socialLinks.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function SocialLinks({ color }) {
   const myStyle = {
     color: color,
-  }
+  };
+
   return (
     <div className={socialStyles.socialLinks}>
       <a
@@ -43,5 +44,5 @@ export default function SocialLinks({ color }) {
         <p className={socialStyles.linkName}>LinkedIn</p>
       </a>
     </div>
-  )
+  );
 }

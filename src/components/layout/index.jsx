@@ -1,14 +1,14 @@
-import React from "react"
-import Header from "../header"
-import Footer from "../footer"
-import "../../styles/index.scss"
-import layoutStyles from "./layout.module.scss"
-import Chatbot from "../chatbot"
+import React from "react";
+import Header from "../header";
+import Footer from "../footer";
+import "../../styles/index.scss";
+import layoutStyles from "./layout.module.scss";
+import Chatbot from "../chatbot";
 
 export default function Layout(props) {
   const layoutStyle = {
     backgroundColor: props.pageBackground,
-  }
+  };
 
   return (
     <div className={layoutStyles.container} style={layoutStyle}>
@@ -19,5 +19,5 @@ export default function Layout(props) {
       <Chatbot />
       <Footer footerBackground={props.footerBackground} />
     </div>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import React from "react"
-import aboutStyles from "./about.module.scss"
-import Image from "../img"
+import React from "react";
+import aboutStyles from "./about.module.scss";
+import Image from "../img";
 
 export default function About() {
   return (
@@ -25,36 +25,32 @@ export default function About() {
           <p>
             <strong>
               {" "}
-              Heya! <span className={aboutStyles.myName}>I'm Phill!</span> I'm a
-              developer from Dallas, TX.{" "}
+              Heya! <span className={aboutStyles.myName}>I'm Phill</span> - The
+              greatest web developer to ever live in the last 437 years.{" "}
             </strong>{" "}
-            I love to build things with JavaScript, React, and CSS to name a
-            few. I'm currently available for freelance or long term work.
-          </p>
-          <p>
-            For the last 15 years I have been a guitarist, composer and band
-            leader. I have produced several albums of my own original music,
-            composed a score for{" "}
+            Currently a contractor at Microsoft doing front end development on{" "}
             <a
               className={aboutStyles.aboutLink}
-              href="https://play.eco/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://azure.microsoft.com/en-us/"
             >
-              {" "}
-              the award winning video game ECO
+              Microsoft Azure
             </a>
-            , and performed in some of the finest venues around the world. As a
-            musician I developed many skills that make me an excellent
-            programmer - creativity, focus, the ability to improvise and learn
-            quickly, entrepreneurship, leadership, marketing, planning,
-            logistics, graphic design, performing under pressure, meeting
-            deadlines, and most importantly teamwork.
+            . It's fun work that involves building and updating new product
+            pages with tech such as JavaScript, C#, HTML, CSS, Git, and ASP.NET
+            Core MVC to name a few. In my free time I love to make games, and
+            fun/interactive web apps. My experience at Microsoft has been
+            amazing and I have learned so much! My contract ends in September
+            2022 so I'm starting to search for my next role! You can download my
+            resume or get my email from the{" "}
+            <a className={aboutStyles.aboutLink} href="../contact">
+              contact page
+            </a>
+            !
           </p>
 
           <p>
-            I began learning Python in 2018 while studying interactive
-            music/sound design at{" "}
+            I started learning programming in 2018 when I was enrolled in a
+            course at{" "}
             <a
               className={aboutStyles.aboutLink}
               href="https://school.videogameaudio.com/apply/"
@@ -63,11 +59,13 @@ export default function About() {
             >
               The School of Video Game Audio
             </a>
-            . I became fascinated with the power of programming and was
-            instantly hooked. After completing several bootcamps for JavaScript,
-            React, and responsive web design I began to build things on my own
-            and seek help from more experienced developers. With the guidance of
-            my mentors{" "}
+            . Working with the Unity game engine required me to learn a bit of
+            C# to integrate my music and sounds into a 3d environment in an
+            interactive way. I became fascinated with the power of programming
+            and was instantly hooked. I completed several bootcamps in full
+            stack web development, JavaScript, React, TypeScript and responsive
+            web design. I began to build web apps on my own and seek help from
+            more experienced developers. With the guidance of my mentors{" "}
             <a
               className={aboutStyles.aboutLink}
               href="https://devmentor.live/"
@@ -85,15 +83,37 @@ export default function About() {
             >
               Ian Marshall
             </a>{" "}
-            I have been able to make leaps and bounds in my understanding of web
-            development and computer science. Along the way I have built a
-            network of experienced programmers/friends that I continue to learn
-            from.
+            I was able to make leaps and bounds in my understanding of web
+            development and computer science.
+          </p>
+
+          <p>
+            Before that I was a full time guitarist, composer, and teacher. I
+            have produced several albums of my own original music, and am
+            currently composing music for an amazing game called{" "}
+            <a
+              className={aboutStyles.aboutLink}
+              href="https://play.eco/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              ECO
+            </a>
+            . As a guitarist I have performed in some of the finest venues
+            around the world. Places like The Blue Note Tokyo, the North Sea
+            Jazz club in Amsterdam, and the Java Jazz Festival in Jakarta. As a
+            musician I developed many skills that make me an excellent
+            programmer - problem solving, focus, understanding of how to learn
+            and practice something effectively, the ability to improvise and
+            learn quickly, entrepreneurship, leadership, marketing, planning,
+            logistics, graphic design, performing under pressure, meeting
+            deadlines, and most importantly teamwork.
           </p>
 
           <p>
             When I'm not programming I love to study flamenco guitar, travel,
-            cook, and go on adventures with my dog.
+            cook, exercise, and go on adventures with my dog.
           </p>
 
           <section className={aboutStyles.mySkills}>
@@ -102,19 +122,20 @@ export default function About() {
               <li>JavaScript</li>
               <li>React</li>
               <li>HTML & CSS</li>
-              <li>SASS</li>
+              <li>C#</li>
               <li>Node.js</li>
-              <li>Git</li>
+              <li>Git/Github</li>
               <li>Gatsby.js</li>
               <li>TypeScript</li>
-              <li>AWS Cloud Practitioner</li>
-              <li>Adobe Photoshop</li>
-              <li>Premiere</li>
+              <li>Azure/AWS</li>
+              <li>.NET</li>
+              <li>Photoshop</li>
               <li>Illustrator</li>
+              <li>Agile</li>
             </ul>
           </section>
         </div>
       </div>
     </section>
-  )
+  );
 }

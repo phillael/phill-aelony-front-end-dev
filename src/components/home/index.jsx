@@ -1,9 +1,8 @@
-import React from "react"
-import homeStyles from "./home.module.scss"
-import SocialLinks from "../socialLinks"
-import ParticleEngineComponent from "../particleEngine"
-import Image from "../img"
-// import observer from "../../utils/useIntersect"
+import React from "react";
+import homeStyles from "./home.module.scss";
+import SocialLinks from "../socialLinks";
+import ParticleEngineComponent from "../particleEngine";
+import Image from "../img";
 
 export default function Home() {
   return (
@@ -49,5 +48,5 @@ export default function Home() {
         />
       </div>
     </main>
-  )
+  );
 }

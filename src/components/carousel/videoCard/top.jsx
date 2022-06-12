@@ -1,6 +1,6 @@
-import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faClock, faList } from "@fortawesome/free-solid-svg-icons"
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock, faList } from "@fortawesome/free-solid-svg-icons";
 import {
   top,
   overlays,
@@ -11,7 +11,7 @@ import {
   addToQueue,
   time,
   thumb,
-} from "./videoCard.module.scss"
+} from "./videoCard.module.scss";
 
 export default function Top({ length, thumbnail }) {
   return (
@@ -31,5 +31,5 @@ export default function Top({ length, thumbnail }) {
       </div>
       <img src={thumbnail} alt="video" className={thumb} />
     </div>
-  )
+  );
 }

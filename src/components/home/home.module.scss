@@ -20,6 +20,7 @@
   position: absolute;
   right: 30px;
 }
+
 ////////////////////
 //   into text    //
 ////////////////////
@@ -27,7 +28,6 @@
 .intro {
   box-sizing: border-box;
   font-family: "Abel";
-
   z-index: -2;
   margin: 150px 0;
   font-size: 3.5rem;
@@ -97,6 +97,7 @@
 .composer {
   font-size: 2.5rem;
 }
+
 .guitarist {
   animation: slideInLeft 6.5s;
   line-height: 0.5;
@@ -161,6 +162,7 @@
   .hello {
     font-size: 3rem;
   }
+
   .intro {
     font-size: 2.5rem;
   }
@@ -172,6 +174,7 @@
     margin: 0 auto;
     padding-left: 0;
   }
+
   .llamas {
     min-width: 350px;
   }
@@ -179,6 +182,7 @@
   .socialLinks {
     right: 0px;
   }
+
   .intro {
     min-width: 300px;
     margin: 125px auto 0;
@@ -292,7 +296,6 @@
   50% {
     color: rgb(71, 180, 71);
   }
-
   100% {
     color: green;
   }

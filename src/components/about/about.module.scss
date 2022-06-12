@@ -25,17 +25,20 @@
   color: white;
   text-decoration: underline;
 }
+
 figure {
   margin: 0 auto;
   order: 2;
   text-align: center;
 }
+
 figcaption p {
   margin: 25px auto;
   width: 60%;
   font-size: 0.8rem;
   text-align: center;
 }
+
 .peppers {
   width: 300px;
 }
@@ -88,6 +91,7 @@ figcaption p {
     margin-right: 50px;
   }
 }
+
 //////////////////
 //    skills    //
 //////////////////
@@ -149,6 +153,7 @@ figcaption p {
 .skillsList li:nth-child(9) {
   animation-delay: 3.3s;
 }
+
 /////////////////
 // animations  //
 /////////////////

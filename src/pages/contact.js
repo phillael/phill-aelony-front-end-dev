@@ -1,7 +1,7 @@
-import React from "react"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import Contact from "../components/contact"
+import React from "react";
+import Layout from "../components/layout";
+import Head from "../components/head";
+import Contact from "../components/contact";
 
 const ContactPage = () => {
   return (
@@ -12,7 +12,7 @@ const ContactPage = () => {
       />
       <Contact />
     </Layout>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

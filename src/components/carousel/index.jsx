@@ -1,16 +1,15 @@
-import React, { useState } from "react"
-import Video from "./videoCard"
-import carouselStyles from "./carousel.module.scss"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React, { useState } from "react";
+import Video from "./videoCard";
+import carouselStyles from "./carousel.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronCircleRight,
   faChevronCircleLeft,
-} from "@fortawesome/free-solid-svg-icons"
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Carousel({ items }) {
-  const [currIndex, setCurrIndex] = useState(0)
-  const cardSize = 344
+  const [currIndex, setCurrIndex] = useState(0);
+  const cardSize = 344;
 
   return (
     <section className={carouselStyles.carouselPageContainer}>
@@ -19,7 +18,7 @@ export default function Carousel({ items }) {
           <div className={`${carouselStyles.arrow} ${carouselStyles.left}`}>
             <FontAwesomeIcon
               icon={faChevronCircleLeft}
-              onClick={() => setCurrIndex(curr => curr - 1)}
+              onClick={() => setCurrIndex((curr) => curr - 1)}
             />
           </div>
         ) : null}
@@ -28,10 +27,11 @@ export default function Carousel({ items }) {
           <div className={`${carouselStyles.arrow} ${carouselStyles.right}`}>
             <FontAwesomeIcon
               icon={faChevronCircleRight}
-              onClick={() => setCurrIndex(curr => curr + 1)}
+              onClick={() => setCurrIndex((curr) => curr + 1)}
             />
           </div>
         ) : null}
+
         <div className={carouselStyles.carousel}>
           <div
             className={carouselStyles.slider}
@@ -40,12 +40,12 @@ export default function Carousel({ items }) {
             }}
           >
             {/* destructure? */}
-            {items.map(json => (
+            {items.map((json) => (
               <Video key={json.url} {...json} />
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
