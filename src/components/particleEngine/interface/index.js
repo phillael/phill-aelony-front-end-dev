@@ -81,7 +81,7 @@ export default function Interface({ open }) {
       updateCircles();
       requestAnimationFrame(loop);
     }
-  }, []);
+  });
 
   return <canvas ref={ref} className={interfaceStyles.interface} />;
 }
