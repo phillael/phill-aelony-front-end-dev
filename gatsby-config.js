@@ -5,11 +5,10 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.phillcodes.com",
-    title:
-      "Phill Aelony | React Developer, JavaScript Wizard, Front End Developer",
+    title: "Phill Aelony | Frontend Developer | React | Typescript | Node",
     author: "Phill Aelony",
     description:
-      "Phill Aelony - Front end dev at Microsoft Azure - JavaScript, React, HTML, CSS, C#, .NET",
+      "Phill Aelony | Web Developer - Frontend experience at Microsoft and Sessions live. Skilled in React, Typescript, Node, NextJs, MobX, ChakraUI",
   },
   plugins: [
     {
