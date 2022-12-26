@@ -44,11 +44,11 @@ export default function About() {
               backend team to design APIs, and implement a system of leveling,
               leagues, and tiers to gamify the process of growing as an artist.
               I worked with XCode and Android Studio to solve platform specific
-              bugs. In addition to Sessions, We were tasked with building a new
+              bugs. In addition to Sessions, we were tasked with building a new
               app from scratch called <strong>Next Music</strong> with a 6 week
               timeline start to finish. My role was to implement a
               signup/login/password recovery system using <strong>React</strong>
-              , <strong>Typescript</strong>,<strong>NextJS</strong>,{" "}
+              , <strong>Typescript</strong>, <strong>NextJS</strong>,{" "}
               <strong>ChakraUI</strong>, and <strong>MobX</strong>. I also
               implemented a flow for onboarding new artists, which involved
               writing custom React Hooks and leveraging MobX actions/views to
@@ -122,8 +122,8 @@ export default function About() {
             </h2>
             <ul className={aboutStyles.skillsList}>
               <li>JavaScript</li>
-              <li>TypeScript</li>
               <li>React/ReactNative</li>
+              <li>TypeScript</li>
               <li>NextJS</li>
               <li>GatsbyJS</li>
               <li>ChakraUI</li>
@@ -132,6 +132,7 @@ export default function About() {
               <li>Git/Github</li>
               <li>HTML & CSS</li>
               <li>MobX State Tree</li>
+              <li>Agile</li>
               <li>.NET</li>
             </ul>
           </section>

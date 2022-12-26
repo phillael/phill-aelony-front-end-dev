@@ -93,6 +93,7 @@ figcaption p {
 .mySkills,
 .skillsTitle {
   user-select: none;
+  text-align: center;
 }
 
 .mySkills {
@@ -116,7 +117,7 @@ figcaption p {
 }
 
 .skillsList li {
-  margin: 0 60px 20px 0;
+  margin: 20px 30px;
   animation: shinySkills 7s infinite;
   user-select: none;
 }
