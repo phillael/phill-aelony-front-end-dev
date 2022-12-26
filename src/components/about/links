@@ -1,0 +1,19 @@
+<a
+  className="{aboutStyles.aboutLink}"
+  href="https://azure.microsoft.com/en-us/"
+>
+  Microsoft Azure
+</a>
+
+<a className="{aboutStyles.aboutLink}" href="../contact">
+  contact page
+</a>
+
+<a
+  className="{aboutStyles.aboutLink}"
+  href="https://play.eco/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  ECO
+</a>
