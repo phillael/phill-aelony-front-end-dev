@@ -1,11 +1,11 @@
-import React from "react"
-import projectsStyles from "./projects.module.scss"
-import ProjectCard from "../projectCard"
-import data from "../../data/projects.json"
+import React from "react";
+import projectsStyles from "./projects.module.scss";
+import ProjectCard from "../projectCard";
+import data from "../../data/projects.json";
 
 const Projects = ({ standAlone = false }) => {
-  const posts = data.projects
-  const title = "Check out my work"
+  const posts = data.projects;
+  const title = "Check out my work";
 
   return (
     <section id="projects" className={projectsStyles.projects}>
@@ -19,12 +19,16 @@ const Projects = ({ standAlone = false }) => {
           )}
           <p>
             Here you can see some things I've built and take a look at the code.
-            Give me a shout if you have any questions or suggestions!
+            <strong>These projects are OLD!</strong> They are some of the first
+            things I made while learning how to code and do not reflect my
+            current experience. Actually Alpaca Pong is still pretty awesome
+            even though the code is janky. I will be updating these in{" "}
+            <strong>January 2023!</strong>
           </p>
         </div>
 
         <ul className={projectsStyles.posts}>
-          {posts.map(post => {
+          {posts.map((post) => {
             return (
               <ProjectCard
                 alt={post.alt}
@@ -34,12 +38,12 @@ const Projects = ({ standAlone = false }) => {
                 link={post.url}
                 description={post.description}
               />
-            )
+            );
           })}
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
