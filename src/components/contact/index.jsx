@@ -11,10 +11,10 @@ export default function Contact() {
         alt="Phill Aelony Photoshop art - Llama in space suit eating ice cream cone."
       />
       <div className={contactStyles.contactContainer}>
-        <h1 className={contactStyles.title}>Let's build stuff! 🍕🦙🍕</h1>
+        <h1 className={contactStyles.title}>Contact Phill!</h1>
         <h4 className={contactStyles.message}>
-          Feel free to reach out if you're looking for a developer, have a
-          question, or just want to connect.
+          Take a look at my resume and feel free to reach out via telepathy. If
+          I don't respond right away, you can try email.
         </h4>
         <div className={contactStyles.contactMethods}>
           <a href="mailto:phillael@yahoo.com" className={contactStyles.email}>
