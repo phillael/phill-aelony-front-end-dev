@@ -36,22 +36,23 @@ export default function About() {
             <p>
               <strong>Decemeber 2022 - </strong> I just finished a great run as
               software engineer at a startup called{" "}
-              <strong>MIR Partners</strong>, working on a live music streaming
-              platform called <strong>Sessions</strong>. I was working with{" "}
+              <strong>MIR Partners</strong>, building a live music streaming
+              platform called <strong>Sessions</strong>. I worked with{" "}
               <strong>Typescript</strong>, <strong>React Native</strong>, and{" "}
               <strong>Mobx State Tree</strong> to build new features to help up
               and coming artists generate more income. I collaborated with the
               backend team to design APIs, and implement a system of leveling,
               leagues, and tiers to gamify the process of growing as an artist.
               I worked with XCode and Android Studio to solve platform specific
-              bugs. We were tasked with building a new app from scratch called{" "}
-              <strong>Next Music</strong> with a 6 week timeline start to
-              finish. My role was to implement a signup/login/password recovery
-              system using <strong>React</strong>, <strong>Typescript</strong>,
-              <strong>NextJS</strong>, <strong>ChakraUI</strong>, and{" "}
-              <strong>MobX</strong>. I also implemented a flow for onboarding
-              new artists, which involved writing custom React Hooks and
-              leveraging MobX actions/views to keep components clean and simple.
+              bugs. In addition to Sessions, We were tasked with building a new
+              app from scratch called <strong>Next Music</strong> with a 6 week
+              timeline start to finish. My role was to implement a
+              signup/login/password recovery system using <strong>React</strong>
+              , <strong>Typescript</strong>,<strong>NextJS</strong>,{" "}
+              <strong>ChakraUI</strong>, and <strong>MobX</strong>. I also
+              implemented a flow for onboarding new artists, which involved
+              writing custom React Hooks and leveraging MobX actions/views to
+              keep components clean and simple.
             </p>
             <p>
               Before that I was a{" "}
@@ -80,9 +81,10 @@ export default function About() {
               drives Azure's roughly $20 billion dollars in profit per quarter.
             </p>
             <p>
-              Side note: I'm a legendary{" "}
-              <strong>jazz guitarst and composer</strong>. I have played some of
-              the finest venues in the world with{" "}
+              <strong>FUN FACT:</strong> I'm a legendary{" "}
+              <strong>guitarist and composer</strong>. I have performed at some
+              of the finest venues in the world with the face melting jazz
+              fusion band{" "}
               <a
                 target="_blank"
                 href="https://www.thefunkyknuckles.com/"
@@ -90,9 +92,9 @@ export default function About() {
               >
                 The Funky Knuckles
               </a>{" "}
-              including the Blue Note Tokyo, The North Sea Jazz Club Amsterdamn,
-              the Royal Opera House in Muscat, Oman, and The Java Jazz Festival
-              in Jakarta. I have an ongoing project -{" "}
+              - places like The Blue Note Tokyo, The North Sea Jazz Club
+              Amsterdam, the Royal Opera House in Muscat, Oman, and The Java
+              Jazz Festival in Jakarta. I have an ongoing project -{" "}
               <strong>Music Composer</strong> for the award winning video game{" "}
               <a
                 className={aboutStyles.aboutLink}
@@ -101,7 +103,7 @@ export default function About() {
               >
                 ECO
               </a>{" "}
-              - by{" "}
+              by{" "}
               <a
                 target="_blank"
                 href="https://play.eco/team"
