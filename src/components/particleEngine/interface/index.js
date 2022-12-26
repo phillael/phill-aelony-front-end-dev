@@ -83,5 +83,5 @@ export default function Interface({ open }) {
     }
   });
 
-  return <canvas ref={ref} className={interfaceStyles.interface} />;
+  return <canvas ref={ref} className={interfaceStyles.userInterface} />;
 }
