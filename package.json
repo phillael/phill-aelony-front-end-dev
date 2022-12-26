@@ -21,7 +21,7 @@
     "axios": "^0.21.0",
     "babel-plugin-prismjs": "^2.0.1",
     "babel-preset-gatsby": "^0.5.16",
-    "gatsby": "^2.32.13",
+    "gatsby": "^5.3.3",
     "gatsby-plugin-page-transitions": "^1.0.8",
     "gatsby-plugin-react-helmet": "^3.5.0",
     "gatsby-plugin-robots-txt": "^1.5.3",
