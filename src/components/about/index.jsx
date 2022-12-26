@@ -110,26 +110,29 @@ export default function About() {
                 className={aboutStyles.aboutLink}
               >
                 Strange Loop Games
-              </a>{" "}
+              </a>
               .
             </p>
           </div>
 
           <section className={aboutStyles.mySkills}>
-            <h2 className={aboutStyles.skillsTitle}>🐐 Mad Skillz 🐐</h2>
+            <h2 className={aboutStyles.skillsTitle}>
+              <span className={aboutStyles.myName}>🐐</span> Mad Skillz{" "}
+              <span className={aboutStyles.myName}>🐐</span>
+            </h2>
             <ul className={aboutStyles.skillsList}>
               <li>JavaScript</li>
               <li>TypeScript</li>
               <li>React/ReactNative</li>
-              <li>MobX State Tree</li>
               <li>NextJS</li>
+              <li>GatsbyJS</li>
               <li>ChakraUI</li>
-              <li>HTML & CSS</li>
+              <li>C#</li>
               <li>NodeJS</li>
               <li>Git/Github</li>
-              <li>GatsbyJS</li>
+              <li>HTML & CSS</li>
+              <li>MobX State Tree</li>
               <li>.NET</li>
-              <li>C#</li>
             </ul>
           </section>
         </div>

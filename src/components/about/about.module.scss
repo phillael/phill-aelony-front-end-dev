@@ -1,6 +1,3 @@
-// .bioContent p {
-//   font-size: 1.3rem;
-// }
 .aboutContainer {
   display: flex;
   flex-direction: column;
@@ -99,11 +96,11 @@ figcaption p {
 }
 
 .mySkills {
-  order: 1;
+  order: 3;
 }
 
 .skillsTitle {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-top: 40px;
 }
 
@@ -119,7 +116,7 @@ figcaption p {
 }
 
 .skillsList li {
-  margin: 0 80px 20px 0;
+  margin: 0 60px 20px 0;
   animation: shinySkills 7s infinite;
   user-select: none;
 }
