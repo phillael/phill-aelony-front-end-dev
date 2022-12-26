@@ -72,16 +72,11 @@
 }
 
 .front,
-.end,
 .developer {
   font-size: 4rem;
 }
 .front {
   animation: fadeIn 4s;
-}
-
-.end {
-  animation: fadeIn 4.5s;
 }
 
 .developer {
@@ -157,7 +152,6 @@
   }
 
   .front,
-  .end,
   .developer,
   .hello {
     font-size: 3rem;
@@ -191,7 +185,6 @@
   }
 
   .front,
-  .end,
   .developer,
   .hello {
     font-size: 2.2rem;

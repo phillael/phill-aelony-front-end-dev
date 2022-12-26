@@ -32,8 +32,7 @@ export default function Home() {
           <span className={homeStyles.hiThere}>Hi there, </span>
           <span className={homeStyles.phill}>I'm Phill</span>
           <span className={homeStyles.period}>.</span> <br />
-          <span className={homeStyles.front}>Front</span>{" "}
-          <span className={homeStyles.end}>End</span>{" "}
+          <span className={homeStyles.front}>Frontend</span>{" "}
           <span className={homeStyles.developer}>
             Developer<span className={homeStyles.comma}>,</span>
           </span>{" "}
