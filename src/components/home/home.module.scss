@@ -76,7 +76,8 @@
   font-size: 4rem;
 }
 .front {
-  animation: fadeIn 4s;
+  color: green;
+  animation: shimmer 3.2s infinite, fadeIn 4s;
 }
 
 .developer {

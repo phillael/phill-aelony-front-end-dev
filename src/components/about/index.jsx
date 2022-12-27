@@ -28,7 +28,7 @@ export default function About() {
                 {" "}
                 Heya! <span className={aboutStyles.myName}>I'm Phill</span> . I
                 am currently open to work...
-                <a className={aboutStyles.aboutLink} href="/contact">
+                <a className={aboutStyles.aboutLink} href="../../contact">
                   Holla!
                 </a>{" "}
               </strong>{" "}
