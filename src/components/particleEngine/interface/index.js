@@ -6,7 +6,6 @@ export default function Interface({ open }) {
   const ref = useRef(null);
 
   useEffect(() => {
-    console.log(open);
     const canvas = ref.current;
     const ctx = canvas.getContext("2d");
     const width = (canvas.width = 255);

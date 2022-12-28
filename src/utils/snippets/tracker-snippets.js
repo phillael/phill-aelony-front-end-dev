@@ -11,7 +11,7 @@ function initMap() {
   }).addTo(map);
 
   document.getElementById("search-btn").addEventListener("click", search);
-}`
+}`;
 
 export const locationSnippet = `function Location({ ipAddress, city, state, zip, timezone, isp, lat, lng }) {
   this.ipAddress = ipAddress;
@@ -50,7 +50,7 @@ Location.prototype.addMarker = function (map) {
     .bindPopup(this.locationString())
     .openPopup();
 };
-        `
+        `;
 
 export const fetchSnippet = `async function search(e) {
   e.preventDefault();
@@ -69,7 +69,6 @@ export const fetchSnippet = `async function search(e) {
   place.addMarker(map);
 
   displayResults();
-  console.log(place);
   // fetch(
   //   https://geo.ipify.org/api/v1?apiKey=at_asff3lEdeaccpRmugRsVKQoMS4Wf&$searchType=$search
   // )
@@ -81,4 +80,4 @@ export const fetchSnippet = `async function search(e) {
 
   //     displayResults();
   //   });
-}`
+}`;

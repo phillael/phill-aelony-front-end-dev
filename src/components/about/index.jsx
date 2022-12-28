@@ -26,7 +26,7 @@ export default function About() {
             <p>
               <strong>
                 {" "}
-                Heya! <span className={aboutStyles.myName}>I'm Phill</span> . I
+                Heya! <span className={aboutStyles.myName}>I'm Phill</span>. I
                 am currently open to work...
                 <a className={aboutStyles.aboutLink} href="../../contact">
                   Holla!
@@ -34,7 +34,7 @@ export default function About() {
               </strong>{" "}
             </p>
             <p>
-              <strong>Decemeber 2022 - </strong> I just finished a great run as
+              <strong>December 2022 - </strong> I just finished a great run as
               software engineer at a startup called{" "}
               <strong>MIR Partners</strong>, building a live music streaming
               platform called <strong>Sessions</strong>. I worked with{" "}
